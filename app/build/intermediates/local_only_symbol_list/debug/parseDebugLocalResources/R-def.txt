@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+drawable chaichai
+drawable chaichai_b
+string app_name
+string app_version
+style Theme.MyEmbyApp
+xml file_paths

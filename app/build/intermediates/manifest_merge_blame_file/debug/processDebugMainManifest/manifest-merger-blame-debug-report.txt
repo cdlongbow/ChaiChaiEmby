@@ -1,0 +1,378 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dh.myembyapp"
+4    platformBuildVersionCode="36"
+5    platformBuildVersionName="16"
+6    android:compileSdkVersion="36"
+7    android:compileSdkVersionCodename="16"
+8    android:versionCode="30"
+9    android:versionName="0.3.0" >
+10
+11    <uses-sdk
+11-->/workspace/app/src/main/AndroidManifest.xml:10:5-12:40
+12        android:minSdkVersion="23"
+12-->/workspace/app/src/main/AndroidManifest.xml:11:9-35
+13        android:targetSdkVersion="36" />
+13-->/workspace/app/src/main/AndroidManifest.xml:12:9-38
+14
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/workspace/app/src/main/AndroidManifest.xml:13:5-66
+15-->/workspace/app/src/main/AndroidManifest.xml:13:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/workspace/app/src/main/AndroidManifest.xml:14:5-78
+16-->/workspace/app/src/main/AndroidManifest.xml:14:22-76
+17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+17-->/workspace/app/src/main/AndroidManifest.xml:15:5-75
+17-->/workspace/app/src/main/AndroidManifest.xml:15:22-73
+18    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+18-->/workspace/app/src/main/AndroidManifest.xml:16:5-85
+18-->/workspace/app/src/main/AndroidManifest.xml:16:22-83
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+19-->/workspace/app/src/main/AndroidManifest.xml:17:5-76
+19-->/workspace/app/src/main/AndroidManifest.xml:17:22-74
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+20-->/workspace/app/src/main/AndroidManifest.xml:18:5-91
+20-->/workspace/app/src/main/AndroidManifest.xml:18:22-89
+21    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+21-->/workspace/app/src/main/AndroidManifest.xml:19:5-82
+21-->/workspace/app/src/main/AndroidManifest.xml:19:22-80
+22
+23    <uses-feature
+23-->/workspace/app/src/main/AndroidManifest.xml:20:5-22:35
+24        android:name="android.hardware.touchscreen"
+24-->/workspace/app/src/main/AndroidManifest.xml:21:9-52
+25        android:required="false" />
+25-->/workspace/app/src/main/AndroidManifest.xml:22:9-33
+26    <uses-feature
+26-->/workspace/app/src/main/AndroidManifest.xml:23:5-25:35
+27        android:name="android.software.leanback"
+27-->/workspace/app/src/main/AndroidManifest.xml:24:9-49
+28        android:required="false" />
+28-->/workspace/app/src/main/AndroidManifest.xml:25:9-33
+29
+30    <queries>
+30-->/workspace/app/src/main/AndroidManifest.xml:26:5-56:15
+31        <package android:name="com.xiaomi.mitv.mediaexplorer" />
+31-->/workspace/app/src/main/AndroidManifest.xml:27:9-64
+31-->/workspace/app/src/main/AndroidManifest.xml:27:18-62
+32
+33        <intent>
+33-->/workspace/app/src/main/AndroidManifest.xml:28:9-33:18
+34            <action android:name="android.intent.action.VIEW" />
+34-->/workspace/app/src/main/AndroidManifest.xml:29:13-64
+34-->/workspace/app/src/main/AndroidManifest.xml:29:21-62
+35
+36            <data
+36-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+37                android:mimeType="video/*"
+37-->/workspace/app/src/main/AndroidManifest.xml:31:17-43
+38                android:scheme="http" />
+38-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+39        </intent>
+40        <intent>
+40-->/workspace/app/src/main/AndroidManifest.xml:34:9-39:18
+41            <action android:name="android.intent.action.VIEW" />
+41-->/workspace/app/src/main/AndroidManifest.xml:29:13-64
+41-->/workspace/app/src/main/AndroidManifest.xml:29:21-62
+42
+43            <data
+43-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+44                android:mimeType="video/*"
+44-->/workspace/app/src/main/AndroidManifest.xml:31:17-43
+45                android:scheme="https" />
+45-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+46        </intent>
+47        <intent>
+47-->/workspace/app/src/main/AndroidManifest.xml:40:9-43:18
+48            <action android:name="android.intent.action.VIEW" />
+48-->/workspace/app/src/main/AndroidManifest.xml:29:13-64
+48-->/workspace/app/src/main/AndroidManifest.xml:29:21-62
+49
+50            <data android:scheme="http" />
+50-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+50-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+51        </intent>
+52        <intent>
+52-->/workspace/app/src/main/AndroidManifest.xml:44:9-47:18
+53            <action android:name="android.intent.action.VIEW" />
+53-->/workspace/app/src/main/AndroidManifest.xml:29:13-64
+53-->/workspace/app/src/main/AndroidManifest.xml:29:21-62
+54
+55            <data android:scheme="https" />
+55-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+55-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+56        </intent>
+57        <intent>
+57-->/workspace/app/src/main/AndroidManifest.xml:48:9-51:18
+58            <action android:name="tv.intent.action.external.SCHEME_PLAY" />
+58-->/workspace/app/src/main/AndroidManifest.xml:49:13-75
+58-->/workspace/app/src/main/AndroidManifest.xml:49:21-73
+59
+60            <data android:scheme="http" />
+60-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+60-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+61        </intent>
+62        <intent>
+62-->/workspace/app/src/main/AndroidManifest.xml:52:9-55:18
+63            <action android:name="tv.intent.action.external.SCHEME_PLAY" />
+63-->/workspace/app/src/main/AndroidManifest.xml:49:13-75
+63-->/workspace/app/src/main/AndroidManifest.xml:49:21-73
+64
+65            <data android:scheme="https" />
+65-->/workspace/app/src/main/AndroidManifest.xml:30:13-32:40
+65-->/workspace/app/src/main/AndroidManifest.xml:32:17-38
+66        </intent>
+67    </queries>
+68
+69    <uses-permission android:name="android.permission.WAKE_LOCK" />
+69-->/workspace/app/src/main/AndroidManifest.xml:57:5-67
+69-->/workspace/app/src/main/AndroidManifest.xml:57:22-65
+70
+71    <permission
+71-->/workspace/app/src/main/AndroidManifest.xml:58:5-60:46
+72        android:name="com.dh.myembyapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+72-->/workspace/app/src/main/AndroidManifest.xml:59:9-81
+73        android:protectionLevel="signature" />
+73-->/workspace/app/src/main/AndroidManifest.xml:60:9-44
+74
+75    <uses-permission android:name="com.dh.myembyapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+75-->/workspace/app/src/main/AndroidManifest.xml:61:5-96
+75-->/workspace/app/src/main/AndroidManifest.xml:61:22-94
+76    <uses-permission android:name="android.permission.CAMERA" />
+76-->/workspace/app/src/main/AndroidManifest.xml:62:5-64
+76-->/workspace/app/src/main/AndroidManifest.xml:62:22-62
+77
+78    <uses-feature
+78-->/workspace/app/src/main/AndroidManifest.xml:63:5-65:35
+79        android:name="android.hardware.camera"
+79-->/workspace/app/src/main/AndroidManifest.xml:64:9-47
+80        android:required="false" />
+80-->/workspace/app/src/main/AndroidManifest.xml:65:9-33
+81    <uses-feature
+81-->/workspace/app/src/main/AndroidManifest.xml:66:5-68:35
+82        android:name="android.hardware.camera.front"
+82-->/workspace/app/src/main/AndroidManifest.xml:67:9-53
+83        android:required="false" />
+83-->/workspace/app/src/main/AndroidManifest.xml:68:9-33
+84    <uses-feature
+84-->/workspace/app/src/main/AndroidManifest.xml:69:5-71:35
+85        android:name="android.hardware.camera.autofocus"
+85-->/workspace/app/src/main/AndroidManifest.xml:70:9-57
+86        android:required="false" />
+86-->/workspace/app/src/main/AndroidManifest.xml:71:9-33
+87    <uses-feature
+87-->/workspace/app/src/main/AndroidManifest.xml:72:5-74:35
+88        android:name="android.hardware.camera.flash"
+88-->/workspace/app/src/main/AndroidManifest.xml:73:9-53
+89        android:required="false" />
+89-->/workspace/app/src/main/AndroidManifest.xml:74:9-33
+90    <uses-feature
+90-->/workspace/app/src/main/AndroidManifest.xml:75:5-77:35
+91        android:name="android.hardware.screen.landscape"
+91-->/workspace/app/src/main/AndroidManifest.xml:76:9-57
+92        android:required="false" />
+92-->/workspace/app/src/main/AndroidManifest.xml:77:9-33
+93    <uses-feature
+93-->/workspace/app/src/main/AndroidManifest.xml:78:5-80:35
+94        android:name="android.hardware.wifi"
+94-->/workspace/app/src/main/AndroidManifest.xml:79:9-45
+95        android:required="false" />
+95-->/workspace/app/src/main/AndroidManifest.xml:80:9-33
+96    <uses-feature
+96-->[com.badlogicgames.gdx:gdx-backend-android:1.13.0] /root/.gradle/caches/8.11.1/transforms/2cbd267f8c4bd8094919c7b21e24eceb/transformed/gdx-backend-android-1.13.0/AndroidManifest.xml:7:5-9:35
+97        android:glEsVersion="0x00020000"
+97-->[com.badlogicgames.gdx:gdx-backend-android:1.13.0] /root/.gradle/caches/8.11.1/transforms/2cbd267f8c4bd8094919c7b21e24eceb/transformed/gdx-backend-android-1.13.0/AndroidManifest.xml:8:9-41
+98        android:required="true" />
+98-->[com.badlogicgames.gdx:gdx-backend-android:1.13.0] /root/.gradle/caches/8.11.1/transforms/2cbd267f8c4bd8094919c7b21e24eceb/transformed/gdx-backend-android-1.13.0/AndroidManifest.xml:9:9-32
+99
+100    <application
+100-->/workspace/app/src/main/AndroidManifest.xml:81:5-172:19
+101        android:name="com.dh.myembyapp.MyEmbyApp"
+101-->/workspace/app/src/main/AndroidManifest.xml:85:9-50
+102        android:allowBackup="true"
+102-->/workspace/app/src/main/AndroidManifest.xml:86:9-35
+103        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+103-->/workspace/app/src/main/AndroidManifest.xml:92:9-77
+104        android:debuggable="true"
+105        android:enableOnBackInvokedCallback="true"
+105-->/workspace/app/src/main/AndroidManifest.xml:93:9-51
+106        android:extractNativeLibs="false"
+106-->/workspace/app/src/main/AndroidManifest.xml:90:9-42
+107        android:hardwareAccelerated="true"
+107-->/workspace/app/src/main/AndroidManifest.xml:87:9-43
+108        android:icon="@drawable/chaichai"
+108-->/workspace/app/src/main/AndroidManifest.xml:84:9-42
+109        android:label="@string/app_name"
+109-->/workspace/app/src/main/AndroidManifest.xml:83:9-41
+110        android:largeHeap="true"
+110-->/workspace/app/src/main/AndroidManifest.xml:88:9-33
+111        android:supportsRtl="true"
+111-->/workspace/app/src/main/AndroidManifest.xml:89:9-35
+112        android:theme="@style/Theme.MyEmbyApp"
+112-->/workspace/app/src/main/AndroidManifest.xml:82:9-47
+113        android:usesCleartextTraffic="true" >
+113-->/workspace/app/src/main/AndroidManifest.xml:91:9-44
+114        <activity
+114-->/workspace/app/src/main/AndroidManifest.xml:94:9-109:20
+115            android:name="com.dh.myembyapp.MainActivity"
+115-->/workspace/app/src/main/AndroidManifest.xml:97:13-57
+116            android:banner="@drawable/chaichai_b"
+116-->/workspace/app/src/main/AndroidManifest.xml:103:13-50
+117            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"
+117-->/workspace/app/src/main/AndroidManifest.xml:101:13-87
+118            android:exported="true"
+118-->/workspace/app/src/main/AndroidManifest.xml:98:13-36
+119            android:icon="@drawable/chaichai"
+119-->/workspace/app/src/main/AndroidManifest.xml:96:13-46
+120            android:label="@string/app_name"
+120-->/workspace/app/src/main/AndroidManifest.xml:95:13-45
+121            android:launchMode="singleTask"
+121-->/workspace/app/src/main/AndroidManifest.xml:99:13-44
+122            android:logo="@drawable/chaichai"
+122-->/workspace/app/src/main/AndroidManifest.xml:102:13-46
+123            android:screenOrientation="landscape" >
+123-->/workspace/app/src/main/AndroidManifest.xml:100:13-50
+124            <intent-filter>
+124-->/workspace/app/src/main/AndroidManifest.xml:104:13-108:29
+125                <action android:name="android.intent.action.MAIN" />
+125-->/workspace/app/src/main/AndroidManifest.xml:105:17-68
+125-->/workspace/app/src/main/AndroidManifest.xml:105:25-66
+126
+127                <category android:name="android.intent.category.LAUNCHER" />
+127-->/workspace/app/src/main/AndroidManifest.xml:106:17-76
+127-->/workspace/app/src/main/AndroidManifest.xml:106:27-74
+128                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+128-->/workspace/app/src/main/AndroidManifest.xml:107:17-85
+128-->/workspace/app/src/main/AndroidManifest.xml:107:27-83
+129            </intent-filter>
+130        </activity>
+131
+132        <service
+132-->/workspace/app/src/main/AndroidManifest.xml:110:9-113:60
+133            android:name="com.dh.myembyapp.dlna.DlnaService"
+133-->/workspace/app/src/main/AndroidManifest.xml:111:13-61
+134            android:exported="false"
+134-->/workspace/app/src/main/AndroidManifest.xml:112:13-37
+135            android:foregroundServiceType="mediaPlayback" />
+135-->/workspace/app/src/main/AndroidManifest.xml:113:13-58
+136
+137        <provider
+137-->/workspace/app/src/main/AndroidManifest.xml:114:9-122:20
+138            android:name="androidx.core.content.FileProvider"
+138-->/workspace/app/src/main/AndroidManifest.xml:115:13-62
+139            android:authorities="com.dh.myembyapp.fileprovider"
+139-->/workspace/app/src/main/AndroidManifest.xml:117:13-64
+140            android:exported="false"
+140-->/workspace/app/src/main/AndroidManifest.xml:116:13-37
+141            android:grantUriPermissions="true" >
+141-->/workspace/app/src/main/AndroidManifest.xml:118:13-47
+142            <meta-data
+142-->/workspace/app/src/main/AndroidManifest.xml:119:13-121:53
+143                android:name="android.support.FILE_PROVIDER_PATHS"
+143-->/workspace/app/src/main/AndroidManifest.xml:120:17-67
+144                android:resource="@xml/file_paths" />
+144-->/workspace/app/src/main/AndroidManifest.xml:121:17-51
+145        </provider>
+146
+147        <uses-library
+147-->/workspace/app/src/main/AndroidManifest.xml:123:9-125:39
+148            android:name="androidx.window.extensions"
+148-->/workspace/app/src/main/AndroidManifest.xml:124:13-54
+149            android:required="false" />
+149-->/workspace/app/src/main/AndroidManifest.xml:125:13-37
+150        <uses-library
+150-->/workspace/app/src/main/AndroidManifest.xml:126:9-128:39
+151            android:name="androidx.window.sidecar"
+151-->/workspace/app/src/main/AndroidManifest.xml:127:13-51
+152            android:required="false" />
+152-->/workspace/app/src/main/AndroidManifest.xml:128:13-37
+153
+154        <provider
+154-->/workspace/app/src/main/AndroidManifest.xml:129:9-145:20
+155            android:name="androidx.startup.InitializationProvider"
+155-->/workspace/app/src/main/AndroidManifest.xml:130:13-67
+156            android:authorities="com.dh.myembyapp.androidx-startup"
+156-->/workspace/app/src/main/AndroidManifest.xml:132:13-68
+157            android:exported="false" >
+157-->/workspace/app/src/main/AndroidManifest.xml:131:13-37
+158            <meta-data
+158-->/workspace/app/src/main/AndroidManifest.xml:133:13-135:51
+159                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+159-->/workspace/app/src/main/AndroidManifest.xml:134:17-75
+160                android:value="androidx.startup" />
+160-->/workspace/app/src/main/AndroidManifest.xml:135:17-49
+161            <meta-data
+161-->/workspace/app/src/main/AndroidManifest.xml:136:13-138:51
+162                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+162-->/workspace/app/src/main/AndroidManifest.xml:137:17-78
+163                android:value="androidx.startup" />
+163-->/workspace/app/src/main/AndroidManifest.xml:138:17-49
+164            <meta-data
+164-->/workspace/app/src/main/AndroidManifest.xml:139:13-141:51
+165                android:name="okhttp3.internal.platform.PlatformInitializer"
+165-->/workspace/app/src/main/AndroidManifest.xml:140:17-77
+166                android:value="androidx.startup" />
+166-->/workspace/app/src/main/AndroidManifest.xml:141:17-49
+167            <meta-data
+167-->/workspace/app/src/main/AndroidManifest.xml:142:13-144:51
+168                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+168-->/workspace/app/src/main/AndroidManifest.xml:143:17-85
+169                android:value="androidx.startup" />
+169-->/workspace/app/src/main/AndroidManifest.xml:144:17-49
+170        </provider>
+171
+172        <receiver
+172-->/workspace/app/src/main/AndroidManifest.xml:146:9-164:20
+173            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+173-->/workspace/app/src/main/AndroidManifest.xml:147:13-76
+174            android:directBootAware="false"
+174-->/workspace/app/src/main/AndroidManifest.xml:151:13-44
+175            android:enabled="true"
+175-->/workspace/app/src/main/AndroidManifest.xml:149:13-35
+176            android:exported="true"
+176-->/workspace/app/src/main/AndroidManifest.xml:150:13-36
+177            android:permission="android.permission.DUMP" >
+177-->/workspace/app/src/main/AndroidManifest.xml:148:13-57
+178            <intent-filter>
+178-->/workspace/app/src/main/AndroidManifest.xml:152:13-154:29
+179                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+179-->/workspace/app/src/main/AndroidManifest.xml:153:17-90
+179-->/workspace/app/src/main/AndroidManifest.xml:153:25-88
+180            </intent-filter>
+181            <intent-filter>
+181-->/workspace/app/src/main/AndroidManifest.xml:155:13-157:29
+182                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+182-->/workspace/app/src/main/AndroidManifest.xml:156:17-84
+182-->/workspace/app/src/main/AndroidManifest.xml:156:25-82
+183            </intent-filter>
+184            <intent-filter>
+184-->/workspace/app/src/main/AndroidManifest.xml:158:13-160:29
+185                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+185-->/workspace/app/src/main/AndroidManifest.xml:159:17-87
+185-->/workspace/app/src/main/AndroidManifest.xml:159:25-85
+186            </intent-filter>
+187            <intent-filter>
+187-->/workspace/app/src/main/AndroidManifest.xml:161:13-163:29
+188                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+188-->/workspace/app/src/main/AndroidManifest.xml:162:17-94
+188-->/workspace/app/src/main/AndroidManifest.xml:162:25-92
+189            </intent-filter>
+190        </receiver>
+191
+192        <activity
+192-->/workspace/app/src/main/AndroidManifest.xml:165:9-171:62
+193            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+193-->/workspace/app/src/main/AndroidManifest.xml:167:13-74
+194            android:clearTaskOnLaunch="true"
+194-->/workspace/app/src/main/AndroidManifest.xml:168:13-45
+195            android:screenOrientation="sensorLandscape"
+195-->/workspace/app/src/main/AndroidManifest.xml:170:13-56
+196            android:stateNotNeeded="true"
+196-->/workspace/app/src/main/AndroidManifest.xml:169:13-42
+197            android:theme="@style/zxing_CaptureTheme"
+197-->/workspace/app/src/main/AndroidManifest.xml:166:13-54
+198            android:windowSoftInputMode="stateAlwaysHidden" />
+198-->/workspace/app/src/main/AndroidManifest.xml:171:13-60
+199    </application>
+200
+201</manifest>

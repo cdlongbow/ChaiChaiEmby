@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.dh.myembyapp-debug-77:/drawable_chaichai_b.png.flat",
+        "source": "com.dh.myembyapp-main-79:/drawable/chaichai_b.png"
+    },
+    {
+        "merged": "com.dh.myembyapp-debug-77:/drawable_chaichai.png.flat",
+        "source": "com.dh.myembyapp-main-79:/drawable/chaichai.png"
+    },
+    {
+        "merged": "com.dh.myembyapp-debug-77:/xml_file_paths.xml.flat",
+        "source": "com.dh.myembyapp-main-79:/xml/file_paths.xml"
+    }
+]

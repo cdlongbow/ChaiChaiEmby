@@ -1,0 +1,12 @@
+package defpackage;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final /* synthetic */ class md0 implements InvocationHandler {
+    @Override // java.lang.reflect.InvocationHandler
+    public final Object invoke(Object obj, Method method, Object[] objArr) {
+        return EmbeddingCompat.Companion.emptyActivityEmbeddingProxy$lambda$2(obj, method, objArr);
+    }
+}
