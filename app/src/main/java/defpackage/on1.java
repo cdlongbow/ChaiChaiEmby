@@ -8,7 +8,6 @@ import androidx.compose.runtime.SnapshotIntStateKt;
 import androidx.compose.runtime.SnapshotStateKt;
 import com.dh.myembyapp.data.preferences.UserPreferences;
 
-/* JADX INFO: loaded from: classes4.dex */
 public final class on1 {
     public final UserPreferences a;
     public final MutableFloatState b;
@@ -23,6 +22,7 @@ public final class on1 {
     public final MutableState k;
     public final MutableState l;
     public final MutableState m;
+    public final MutableState n;
 
     public on1(UserPreferences userPreferences) {
         userPreferences.getClass();
@@ -39,5 +39,6 @@ public final class on1 {
         this.k = SnapshotStateKt__SnapshotStateKt.mutableStateOf$default(userPreferences.getVideoVersionPrioritySettings(), null, 2, null);
         this.l = SnapshotStateKt__SnapshotStateKt.mutableStateOf$default(userPreferences.getAudioVersionPrioritySettings(), null, 2, null);
         this.m = SnapshotStateKt__SnapshotStateKt.mutableStateOf$default(userPreferences.getSubtitleVersionPrioritySettings(), null, 2, null);
+        this.n = SnapshotStateKt__SnapshotStateKt.mutableStateOf$default(userPreferences.getSystemDurationDisplayMode(), null, 2, null);
     }
 }

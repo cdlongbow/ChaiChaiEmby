@@ -49,6 +49,7 @@ import com.dh.myembyapp.data.model.AudioVersionPrioritySettings;
 import com.dh.myembyapp.data.model.DanmakuConfig;
 import com.dh.myembyapp.data.model.MediaItem;
 import com.dh.myembyapp.data.model.SubtitleVersionPrioritySettings;
+import com.dh.myembyapp.data.model.SystemDurationDisplayMode;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedDisplayMode;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedPosition;
 import com.dh.myembyapp.data.model.SystemTimeDisplayMode;
@@ -273,6 +274,9 @@ public abstract class lh1 {
             boolean z5 = z4 && systemNetworkSpeedPosition == SystemNetworkSpeedPosition.TOP_CENTER;
             boolean z6 = z4 && systemNetworkSpeedPosition == SystemNetworkSpeedPosition.TOP_RIGHT;
             boolean z7 = oh1Var.s.length() > 0 && ((z2 && systemTimeDisplayMode.getShowsInMenu()) || systemTimeDisplayMode.getIsPinned());
+            SystemDurationDisplayMode systemDurationDisplayMode = oh1Var.t;
+            boolean z8 = oh1Var.u != null && oh1Var.u.length() > 0 && ((z2 && systemDurationDisplayMode.getShowsInMenu()) || systemDurationDisplayMode.getIsPinned());
+            boolean z9 = z4 && systemNetworkSpeedPosition == SystemNetworkSpeedPosition.BOTTOM_RIGHT;
             if (oh1Var.b > 0.01f) {
                 composerStartRestartGroup.startReplaceGroup(142942861);
                 String str2 = oh1Var.c;
@@ -417,7 +421,7 @@ public abstract class lh1 {
             }
             if (oh1Var.i) {
                 composer2.startReplaceGroup(145221113);
-                Modifier modifierM1003paddingqDBjuR0$default = PaddingKt.m1003paddingqDBjuR0$default(SizeKt.fillMaxSize$default(Modifier.INSTANCE, 0.0f, r3, null), 0.0f, 0.0f, Dp.m7813constructorimpl(10.0f), Dp.m7813constructorimpl(80.0f), 3, null);
+                Modifier modifierM1003paddingqDBjuR0$default = PaddingKt.m1003paddingqDBjuR0$default(SizeKt.fillMaxSize$default(Modifier.INSTANCE, 0.0f, r3, null), 0.0f, 0.0f, Dp.m7813constructorimpl(10.0f), Dp.m7813constructorimpl(200.0f), 3, null);
                 MeasurePolicy measurePolicyMaybeCachedBoxMeasurePolicy3 = BoxKt.maybeCachedBoxMeasurePolicy(Alignment.INSTANCE.getBottomEnd(), false);
                 long currentCompositeKeyHashCode4 = ComposablesKt.getCurrentCompositeKeyHashCode(composer2, 0);
                 int i11 = (int) (currentCompositeKeyHashCode4 ^ (currentCompositeKeyHashCode4 >>> 32));
@@ -486,7 +490,7 @@ public abstract class lh1 {
                 composer2.startReplaceGroup(146219871);
                 composer2.endReplaceGroup();
             }
-            if (z6 || z7) {
+            if (z6 || z7 || z8) {
                 composer2.startReplaceGroup(146302827);
                 Modifier.Companion companion9 = Modifier.INSTANCE;
                 Modifier modifierM1003paddingqDBjuR0$default3 = PaddingKt.m1003paddingqDBjuR0$default(SizeKt.fillMaxSize$default(companion9, f2, r3, obj2), 0.0f, Dp.m7813constructorimpl(18.0f), Dp.m7813constructorimpl(24.0f), 0.0f, 9, null);
@@ -550,11 +554,85 @@ public abstract class lh1 {
                     composer2.startReplaceGroup(-1853932930);
                     composer2.endReplaceGroup();
                 }
+                if (z8) {
+                    composer2.startReplaceGroup(-1853769000);
+                    Composer composer9 = composer2;
+                    TextKt.m3048TextNvy7gAk(oh1Var.u, null, Color.INSTANCE.m5189getWhite0d7_KjU(), null, 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer9, RendererCapabilities.DECODER_SUPPORT_MASK, 0, 262138);
+                    composer2 = composer9;
+                    composer2.endReplaceGroup();
+                } else {
+                    composer2.startReplaceGroup(-1853769001);
+                    composer2.endReplaceGroup();
+                }
                 composer2.endNode();
                 composer2.endNode();
                 composer2.endReplaceGroup();
             } else {
                 composer2.startReplaceGroup(147090847);
+                composer2.endReplaceGroup();
+            }
+            if (z9) {
+                composer2.startReplaceGroup(-1853000000);
+                Modifier modifierM1003paddingqDBjuR0$defaultBottom = PaddingKt.m1003paddingqDBjuR0$default(SizeKt.fillMaxSize$default(Modifier.INSTANCE, f2, r3, obj2), 0.0f, f2, Dp.m7813constructorimpl(16.0f), Dp.m7813constructorimpl(16.0f), 5, null);
+                MeasurePolicy measurePolicyMaybeCachedBoxMeasurePolicy4 = BoxKt.maybeCachedBoxMeasurePolicy(Alignment.INSTANCE.getBottomEnd(), false);
+                long currentCompositeKeyHashCode5 = ComposablesKt.getCurrentCompositeKeyHashCode(composer2, 0);
+                int i12 = (int) ((currentCompositeKeyHashCode5 >>> 32) ^ currentCompositeKeyHashCode5);
+                CompositionLocalMap currentCompositionLocalMap5 = composer2.getCurrentCompositionLocalMap();
+                Modifier modifierMaterializeModifier5 = ComposedModifierKt.materializeModifier(composer2, modifierM1003paddingqDBjuR0$defaultBottom);
+                ComposeUiNode.Companion companion8 = ComposeUiNode.INSTANCE;
+                Function0<ComposeUiNode> constructor5 = companion8.getConstructor();
+                if (composer2.getApplier() == null) {
+                    ComposablesKt.invalidApplier();
+                }
+                composer2.startReusableNode();
+                if (composer2.getInserting()) {
+                    composer2.createNode(constructor5);
+                } else {
+                    composer2.useNode();
+                }
+                Composer composerM4318constructorimpl5 = Updater.m4318constructorimpl(composer2);
+                mr.z(companion8, composerM4318constructorimpl5, measurePolicyMaybeCachedBoxMeasurePolicy4, composerM4318constructorimpl5, currentCompositionLocalMap5);
+                Updater.m4326setimpl(composerM4318constructorimpl5, modifierMaterializeModifier5, (Function2<? super T, ? super Modifier, Unit>) id.h(companion8, composerM4318constructorimpl5, Integer.valueOf(i12), composerM4318constructorimpl5));
+                BoxScopeInstance boxScopeInstance4 = BoxScopeInstance.INSTANCE;
+                Composer composer6 = composer2;
+                TextKt.m3048TextNvy7gAk(oh1Var.o, null, Color.INSTANCE.m5189getWhite0d7_KjU(), null, 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer6, RendererCapabilities.DECODER_SUPPORT_MASK, 0, 262138);
+                composer2 = composer6;
+                composer2.endNode();
+                composer2.endReplaceGroup();
+            } else {
+                composer2.startReplaceGroup(-1853000001);
+                composer2.endReplaceGroup();
+            }
+            if (z8) {
+                composer2.startReplaceGroup(-1852000000);
+                Modifier modifierM1003paddingqDBjuR0$defaultBottomLeft = PaddingKt.m1003paddingqDBjuR0$default(SizeKt.fillMaxSize$default(Modifier.INSTANCE, f2, r3, obj2), Dp.m7813constructorimpl(16.0f), f2, Dp.m7813constructorimpl(16.0f), 0.0f, 10, null);
+                MeasurePolicy measurePolicyMaybeCachedBoxMeasurePolicy4 = BoxKt.maybeCachedBoxMeasurePolicy(Alignment.INSTANCE.getBottomStart(), false);
+                long currentCompositeKeyHashCode5 = ComposablesKt.getCurrentCompositeKeyHashCode(composer2, 0);
+                int i12 = (int) ((currentCompositeKeyHashCode5 >>> 32) ^ currentCompositeKeyHashCode5);
+                CompositionLocalMap currentCompositionLocalMap5 = composer2.getCurrentCompositionLocalMap();
+                Modifier modifierMaterializeModifier5 = ComposedModifierKt.materializeModifier(composer2, modifierM1003paddingqDBjuR0$defaultBottomLeft);
+                ComposeUiNode.Companion companion8 = ComposeUiNode.INSTANCE;
+                Function0<ComposeUiNode> constructor5 = companion8.getConstructor();
+                if (composer2.getApplier() == null) {
+                    ComposablesKt.invalidApplier();
+                }
+                composer2.startReusableNode();
+                if (composer2.getInserting()) {
+                    composer2.createNode(constructor5);
+                } else {
+                    composer2.useNode();
+                }
+                Composer composerM4318constructorimpl5 = Updater.m4318constructorimpl(composer2);
+                mr.z(companion8, composerM4318constructorimpl5, measurePolicyMaybeCachedBoxMeasurePolicy4, composerM4318constructorimpl5, currentCompositionLocalMap5);
+                Updater.m4326setimpl(composerM4318constructorimpl5, modifierMaterializeModifier5, (Function2<? super T, ? super Modifier, Unit>) id.h(companion8, composerM4318constructorimpl5, Integer.valueOf(i12), composerM4318constructorimpl5));
+                BoxScopeInstance boxScopeInstance4 = BoxScopeInstance.INSTANCE;
+                Composer composer6 = composer2;
+                TextKt.m3048TextNvy7gAk(oh1Var.u, null, Color.INSTANCE.m5189getWhite0d7_KjU(), null, 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer6, RendererCapabilities.DECODER_SUPPORT_MASK, 0, 262138);
+                composer2 = composer6;
+                composer2.endNode();
+                composer2.endReplaceGroup();
+            } else {
+                composer2.startReplaceGroup(-1852000001);
                 composer2.endReplaceGroup();
             }
             if (id.u(composer2, (i5 >> 3) & 14, function2)) {

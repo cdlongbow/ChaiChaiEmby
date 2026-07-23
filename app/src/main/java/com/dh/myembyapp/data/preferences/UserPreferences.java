@@ -12,6 +12,7 @@ import com.dh.myembyapp.data.model.SubtitleFormatPriorityType;
 import com.dh.myembyapp.data.model.SubtitleLanguagePriorityType;
 import com.dh.myembyapp.data.model.SubtitlePrioritySortType;
 import com.dh.myembyapp.data.model.SubtitleVersionPrioritySettings;
+import com.dh.myembyapp.data.model.SystemDurationDisplayMode;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedDisplayMode;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedPosition;
 import com.dh.myembyapp.data.model.SystemTimeDisplayMode;
@@ -100,6 +101,7 @@ public final class UserPreferences {
     private static final String KEY_SYSTEM_NETWORK_SPEED_DISPLAY_MODE = "system_network_speed_display_mode";
     private static final String KEY_SYSTEM_NETWORK_SPEED_POSITION = "system_network_speed_position";
     private static final String KEY_SYSTEM_TIME_DISPLAY_MODE = "system_time_display_mode";
+    private static final String KEY_SYSTEM_DURATION_DISPLAY_MODE = "system_duration_display_mode";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_USER_ID = "user_id";
     private static final String KEY_VIDEO_PRIORITY_RULES = "video_priority_rules";
@@ -699,6 +701,11 @@ public final class UserPreferences {
         return systemTimeDisplayModeFromStorageValue == null ? SystemTimeDisplayMode.MENU_ONLY : systemTimeDisplayModeFromStorageValue;
     }
 
+    public final SystemDurationDisplayMode getSystemDurationDisplayMode() {
+        SystemDurationDisplayMode systemDurationDisplayModeFromStorageValue = SystemDurationDisplayMode.INSTANCE.fromStorageValue(this.prefs.getString(KEY_SYSTEM_DURATION_DISPLAY_MODE, null));
+        return systemDurationDisplayModeFromStorageValue == null ? SystemDurationDisplayMode.MENU_ONLY : systemDurationDisplayModeFromStorageValue;
+    }
+
     public final String getUserId() {
         return this.prefs.getString(KEY_USER_ID, null);
     }
@@ -887,6 +894,11 @@ public final class UserPreferences {
     public final void saveSystemTimeDisplayMode(SystemTimeDisplayMode mode) {
         mode.getClass();
         this.prefs.edit().putString(KEY_SYSTEM_TIME_DISPLAY_MODE, mode.getStorageValue()).apply();
+    }
+
+    public final void saveSystemDurationDisplayMode(SystemDurationDisplayMode mode) {
+        mode.getClass();
+        this.prefs.edit().putString(KEY_SYSTEM_DURATION_DISPLAY_MODE, mode.getStorageValue()).apply();
     }
 
     public final void saveVideoVersionPrioritySettings(VideoVersionPrioritySettings settings) {

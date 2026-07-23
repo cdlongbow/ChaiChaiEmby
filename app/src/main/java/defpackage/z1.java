@@ -157,7 +157,7 @@ public final /* synthetic */ class z1 implements Function2 {
                     if (ComposerKt.isTraceInProgress()) {
                         ComposerKt.traceEventStart(856023482, iIntValue7, -1, "com.dh.myembyapp.ui.screens.player.PlayerPlaybackOverlays.<anonymous>.<anonymous>.<anonymous>.<anonymous> (PlayerPlaybackContent.kt:442)");
                     }
-                    TextKt.m3048TextNvy7gAk(kb0.x("当前网速 ", this.b), PaddingKt.m1000paddingVpY3zN4(Modifier.INSTANCE, Dp.m7813constructorimpl(16.0f), Dp.m7813constructorimpl(6.0f)), Color.INSTANCE.m5189getWhite0d7_KjU(), null, 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer7, 432, 0, 262136);
+                    TextKt.m3048TextNvy7gAk(this.b, PaddingKt.m1000paddingVpY3zN4(Modifier.INSTANCE, Dp.m7813constructorimpl(16.0f), Dp.m7813constructorimpl(6.0f)), Color.INSTANCE.m5189getWhite0d7_KjU(), null, 0L, null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer7, 432, 0, 262136);
                     if (ComposerKt.isTraceInProgress()) {
                         ComposerKt.traceEventEnd();
                     }

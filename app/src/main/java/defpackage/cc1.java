@@ -68,6 +68,7 @@ import com.dh.myembyapp.data.model.SubtitlePrioritySortType;
 import com.dh.myembyapp.data.model.SubtitleVersionPrioritySettings;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedDisplayMode;
 import com.dh.myembyapp.data.model.SystemNetworkSpeedPosition;
+import com.dh.myembyapp.data.model.SystemDurationDisplayMode;
 import com.dh.myembyapp.data.model.SystemTimeDisplayMode;
 import com.dh.myembyapp.data.model.VideoPriorityRule;
 import com.dh.myembyapp.data.model.VideoPrioritySortType;
@@ -342,6 +343,62 @@ public abstract class cc1 {
         ScopeUpdateScope scopeUpdateScopeEndRestartGroup = composerStartRestartGroup.endRestartGroup();
         if (scopeUpdateScopeEndRestartGroup != null) {
             scopeUpdateScopeEndRestartGroup.updateScope(new e81(systemNetworkSpeedPosition, function1, i, 3));
+        }
+    }
+
+    public static final void F(SystemDurationDisplayMode systemDurationDisplayMode, Function1 function1, Composer composer, int i) {
+        Composer composerStartRestartGroup = composer.startRestartGroup(-1329497335);
+        int i2 = (i & 6) == 0 ? (composerStartRestartGroup.changed(systemDurationDisplayMode.ordinal()) ? 4 : 2) | i : i;
+        if ((i & 48) == 0) {
+            i2 |= composerStartRestartGroup.changedInstance(function1) ? 32 : 16;
+        }
+        if (composerStartRestartGroup.shouldExecute((i2 & 19) != 18, i2 & 1)) {
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventStart(-1329497335, i2, -1, "com.dh.myembyapp.ui.components.SystemDurationDisplayModeSelector (OtherSettingsOverlay.kt)");
+            }
+            List<SystemDurationDisplayMode> listListOf = CollectionsKt.listOf((Object[]) new SystemDurationDisplayMode[]{SystemDurationDisplayMode.MENU_ONLY, SystemDurationDisplayMode.ALWAYS, SystemDurationDisplayMode.OFF});
+            Modifier modifierFillMaxWidth$default = SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null);
+            MeasurePolicy measurePolicyRowMeasurePolicy = RowKt.rowMeasurePolicy(Arrangement.INSTANCE.m712spacedBy0680j_4(Dp.m7813constructorimpl(8.0f)), Alignment.INSTANCE.getTop(), composerStartRestartGroup, 6);
+            long currentCompositeKeyHashCode = ComposablesKt.getCurrentCompositeKeyHashCode(composerStartRestartGroup, 0);
+            int i3 = (int) (currentCompositeKeyHashCode ^ (currentCompositeKeyHashCode >>> 32));
+            CompositionLocalMap currentCompositionLocalMap = composerStartRestartGroup.getCurrentCompositionLocalMap();
+            Modifier modifierMaterializeModifier = ComposedModifierKt.materializeModifier(composerStartRestartGroup, modifierFillMaxWidth$default);
+            ComposeUiNode.Companion companion = ComposeUiNode.INSTANCE;
+            Function0<ComposeUiNode> constructor = companion.getConstructor();
+            if (composerStartRestartGroup.getApplier() == null) {
+                ComposablesKt.invalidApplier();
+            }
+            composerStartRestartGroup.startReusableNode();
+            if (composerStartRestartGroup.getInserting()) {
+                composerStartRestartGroup.createNode(constructor);
+            } else {
+                composerStartRestartGroup.useNode();
+            }
+            Composer composerM4318constructorimpl = Updater.m4318constructorimpl(composerStartRestartGroup);
+            mr.z(companion, composerM4318constructorimpl, measurePolicyRowMeasurePolicy, composerM4318constructorimpl, currentCompositionLocalMap);
+            Updater.m4326setimpl(composerM4318constructorimpl, modifierMaterializeModifier, (Function2<? super T, ? super Modifier, Unit>) id.h(companion, composerM4318constructorimpl, Integer.valueOf(i3), composerM4318constructorimpl));
+            RowScopeInstance rowScopeInstance = RowScopeInstance.INSTANCE;
+            composerStartRestartGroup.startReplaceGroup(-373727394);
+            for (SystemDurationDisplayMode systemDurationDisplayMode2 : listListOf) {
+                String label = systemDurationDisplayMode2.getLabel();
+                boolean z = systemDurationDisplayMode == systemDurationDisplayMode2;
+                boolean zChanged = ((i2 & 32) == 32) | composerStartRestartGroup.changed(systemDurationDisplayMode2.ordinal());
+                Object objRememberedValue = composerStartRestartGroup.rememberedValue();
+                if (zChanged || objRememberedValue == Composer.INSTANCE.getEmpty()) {
+                    objRememberedValue = new jx0(23, function1, systemDurationDisplayMode2);
+                    composerStartRestartGroup.updateRememberedValue(objRememberedValue);
+                }
+                h(label, z, (Function0) objRememberedValue, composerStartRestartGroup, 0);
+            }
+            if (i9.s(composerStartRestartGroup)) {
+                ComposerKt.traceEventEnd();
+            }
+        } else {
+            composerStartRestartGroup.skipToGroupEnd();
+        }
+        ScopeUpdateScope scopeUpdateScopeEndRestartGroup = composerStartRestartGroup.endRestartGroup();
+        if (scopeUpdateScopeEndRestartGroup != null) {
+            scopeUpdateScopeEndRestartGroup.updateScope(new e81(systemDurationDisplayMode, function1, i, 4));
         }
     }
 
@@ -3130,6 +3187,37 @@ public abstract class cc1 {
                 composer.updateRememberedValue(objRememberedValue);
             }
             E(systemTimeDisplayModeM, focusRequester, focusRequester2, focusRequester3, (Function1) objRememberedValue, composer, 3504);
+            SpacerKt.Spacer(SizeKt.m1050height3ABfNKs(companion3, Dp.m7813constructorimpl(14.0f)), composer, 6);
+            Alignment.Vertical centerVerticallyDuration = companion5.getCenterVertically();
+            Modifier modifierM1003paddingqDBjuR0$defaultDuration = PaddingKt.m1003paddingqDBjuR0$default(companion3, 0.0f, 0.0f, 0.0f, Dp.m7813constructorimpl(6.0f), 7, null);
+            MeasurePolicy measurePolicyRowMeasurePolicyDuration = RowKt.rowMeasurePolicy(arrangement.getStart(), centerVerticallyDuration, composer, 48);
+            int iBDuration = id.b(ComposablesKt.getCurrentCompositeKeyHashCode(composer, 0));
+            CompositionLocalMap currentCompositionLocalMapDuration = composer.getCurrentCompositionLocalMap();
+            Modifier modifierMaterializeModifierDuration = ComposedModifierKt.materializeModifier(composer, modifierM1003paddingqDBjuR0$defaultDuration);
+            Function0<ComposeUiNode> constructorDuration = companion6.getConstructor();
+            if (!id.n(composer.getApplier())) {
+                ComposablesKt.invalidApplier();
+            }
+            composer.startReusableNode();
+            if (composer.getInserting()) {
+                composer.createNode(constructorDuration);
+            } else {
+                composer.useNode();
+            }
+            Composer composerM4318constructorimplDuration = Updater.m4318constructorimpl(composer);
+            mr.z(companion6, composerM4318constructorimplDuration, measurePolicyRowMeasurePolicyDuration, composerM4318constructorimplDuration, currentCompositionLocalMapDuration);
+            Updater.m4326setimpl(composerM4318constructorimplDuration, modifierMaterializeModifierDuration, (Function2<? super T, ? super Modifier, Unit>) id.h(companion6, composerM4318constructorimplDuration, Integer.valueOf(iBDuration), composerM4318constructorimplDuration));
+            RowScopeInstance rowScopeInstanceDuration = RowScopeInstance.INSTANCE;
+            TextKt.m3048TextNvy7gAk("播放时长常驻", null, companion4.m5189getWhite0d7_KjU(), null, TextUnitKt.getSp(15), null, null, null, 0L, null, null, 0L, 0, false, 0, 0, null, null, composer, 24966, 0, 262122);
+            composer.endNode();
+            SystemDurationDisplayMode systemDurationDisplayMode = (SystemDurationDisplayMode) mutableStateDuration.getValue();
+            boolean zChangedDuration = composer.changed(mutableStateDuration);
+            Object objRememberedValueDuration = composer.rememberedValue();
+            if (zChangedDuration || objRememberedValueDuration == Composer.INSTANCE.getEmpty()) {
+                objRememberedValueDuration = new p21(22, mutableStateDuration);
+                composer.updateRememberedValue(objRememberedValueDuration);
+            }
+            F(systemDurationDisplayMode, (Function1) objRememberedValueDuration, composer, 0);
             SpacerKt.Spacer(SizeKt.m1050height3ABfNKs(companion3, Dp.m7813constructorimpl(12.0f)), composer, 6);
             Alignment.Vertical centerVertically2 = companion5.getCenterVertically();
             Modifier modifierM1003paddingqDBjuR0$default2 = PaddingKt.m1003paddingqDBjuR0$default(companion3, 0.0f, 0.0f, 0.0f, Dp.m7813constructorimpl(6.0f), 7, null);
