@@ -36,8 +36,8 @@ public final class vz0 implements DefaultLifecycleObserver {
 
     @Override // androidx.lifecycle.DefaultLifecycleObserver
     public final void onStart(LifecycleOwner lifecycleOwner) {
-        Result.Companion companion = Result.INSTANCE;
-        this.a.resumeWith(Result.m8825constructorimpl(Unit.INSTANCE));
+        
+        this.a.resumeWith(Unit.INSTANCE);
     }
 
     @Override // androidx.lifecycle.DefaultLifecycleObserver

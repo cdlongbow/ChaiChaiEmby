@@ -64,7 +64,7 @@ public final class mf2 extends SuspendLambda implements Function2 {
             case 0:
                 ResultKt.throwOnFailure(obj);
                 try {
-                    Result.Companion companion = Result.INSTANCE;
+                    
                     if (!(ye2Var.d || ye2Var.e)) {
                         throw new IllegalArgumentException("请至少勾选一类同步内容");
                     }
@@ -72,27 +72,27 @@ public final class mf2 extends SuspendLambda implements Function2 {
                     if (rf2VarC == null) {
                         throw new IllegalStateException("远端还没有可下载的同步文件");
                     }
-                    objM8825constructorimpl = Result.m8825constructorimpl(pf2.c(rf2VarC, ye2Var));
+                    objM8825constructorimpl = pf2.c(rf2VarC, ye2Var);
                     Throwable thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(objM8825constructorimpl);
                     if (thM8828exceptionOrNullimpl != null) {
                         Log.e("WebDavSyncRepository", "读取 WebDAV 下载预览失败", thM8828exceptionOrNullimpl);
                     }
                     return Result.m8824boximpl(objM8825constructorimpl);
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 break;
             default:
                 ResultKt.throwOnFailure(obj);
                 try {
-                    Result.Companion companion3 = Result.INSTANCE;
+                    
                     new ff2(pf2Var, ye2Var).d();
-                    objM8825constructorimpl2 = Result.m8825constructorimpl("连接成功，已确认远端目录 ChaiChaiEmby 可访问。");
+                    objM8825constructorimpl2 = "连接成功，已确认远端目录 ChaiChaiEmby 可访问。";
                     break;
                 } catch (Throwable th2) {
-                    Result.Companion companion4 = Result.INSTANCE;
-                    objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                    
+                    objM8825constructorimpl2 = ResultKt.createFailure(th2);
                 }
                 Throwable thM8828exceptionOrNullimpl2 = Result.m8828exceptionOrNullimpl(objM8825constructorimpl2);
                 if (thM8828exceptionOrNullimpl2 != null) {

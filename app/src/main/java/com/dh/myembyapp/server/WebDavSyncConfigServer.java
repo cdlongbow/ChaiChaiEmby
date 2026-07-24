@@ -8,7 +8,6 @@ import defpackage.ye2;
 import fi.iki.elonen.NanoHTTPD;
 import java.util.HashMap;
 import java.util.Locale;
-import kotlin.Metadata;
 import kotlin.Result;
 import kotlin.ResultKt;
 import kotlin.Unit;
@@ -19,7 +18,6 @@ import kotlinx.coroutines.DebugKt;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\b\b\u0002\u0018\u00002\u00020\u0001B+\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0012\u0010\b\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u0010\u001a\u00020\u000b2\u0006\u0010\u000f\u001a\u00020\u000eH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\u000b2\u0006\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0016\u0010\u0011R \u0010\b\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00070\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010\u0017R\u0016\u0010\u0018\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019¨\u0006\u001a"}, d2 = {"Lcom/dh/myembyapp/server/WebDavSyncConfigServer;", "Lfi/iki/elonen/NanoHTTPD;", "", "port", "Lye2;", "initialConfig", "Lkotlin/Function1;", "", "onConfigReceived", "<init>", "(ILye2;Lkotlin/jvm/functions/Function1;)V", "Lfi/iki/elonen/NanoHTTPD$Response;", "serveHtmlPage", "()Lfi/iki/elonen/NanoHTTPD$Response;", "Lfi/iki/elonen/NanoHTTPD$IHTTPSession;", "session", "handleSave", "(Lfi/iki/elonen/NanoHTTPD$IHTTPSession;)Lfi/iki/elonen/NanoHTTPD$Response;", "", "value", "escapeJson", "(Ljava/lang/String;)Ljava/lang/String;", "serve", "Lkotlin/jvm/functions/Function1;", "currentConfig", "Lye2;", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
 final class WebDavSyncConfigServer extends NanoHTTPD {
     private ye2 currentConfig;
     private final Function1<ye2, Unit> onConfigReceived;
@@ -81,13 +79,13 @@ final class WebDavSyncConfigServer extends NanoHTTPD {
                 return responseNewFixedLengthResponse;
             }
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(new JSONObject(str));
+                
+                objM8825constructorimpl = new JSONObject(str);
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
-            if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+            if (false) {
                 objM8825constructorimpl = null;
             }
             JSONObject jSONObject = (JSONObject) objM8825constructorimpl;
@@ -159,7 +157,7 @@ final class WebDavSyncConfigServer extends NanoHTTPD {
         String strReplace$default2;
         String strReplace$default3;
         String strReplace$default4;
-        return (str == null || (strReplace$default = StringsKt.replace$default(str, "&", "&amp;", false, 4, (Object) null)) == null || (strReplace$default2 = StringsKt.replace$default(strReplace$default, "\"", "&quot;", false, 4, (Object) null)) == null || (strReplace$default3 = StringsKt.replace$default(strReplace$default2, "<", "&lt;", false, 4, (Object) null)) == null || (strReplace$default4 = StringsKt.replace$default(strReplace$default3, ">", "&gt;", false, 4, (Object) null)) == null) ? "" : strReplace$default4;
+        return (str == null || (strReplace$default = str.replace("&", "&amp;")) == null || (strReplace$default2 = StringsKt.replace$default(strReplace$default, "\"", "&quot;", false, 4, (Object) null)) == null || (strReplace$default3 = StringsKt.replace$default(strReplace$default2, "<", "&lt;", false, 4, (Object) null)) == null || (strReplace$default4 = StringsKt.replace$default(strReplace$default3, ">", "&gt;", false, 4, (Object) null)) == null) ? "" : strReplace$default4;
     }
 
     @Override // fi.iki.elonen.NanoHTTPD

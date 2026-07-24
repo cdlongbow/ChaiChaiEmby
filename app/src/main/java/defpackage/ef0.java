@@ -45,7 +45,7 @@ public final class ef0 extends SuspendLambda implements Function2 {
         try {
             if (i == 0) {
                 ResultKt.throwOnFailure(obj);
-                Result.Companion companion = Result.INSTANCE;
+                
                 uf0 uf0Var = this.b;
                 String str = this.c;
                 List list = this.d;
@@ -61,13 +61,13 @@ public final class ef0 extends SuspendLambda implements Function2 {
                 }
                 ResultKt.throwOnFailure(obj);
             }
-            objM8825constructorimpl = Result.m8825constructorimpl(obj);
+            objM8825constructorimpl = obj;
         } catch (CancellationException e) {
             throw e;
         } catch (Exception e2) {
             Log.e("EmbyRepository", "媒体库排序：弹窗准备失败", e2);
-            Result.Companion companion2 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("准备媒体库排序数据失败: ", e2.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("准备媒体库排序数据失败: ", e2.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

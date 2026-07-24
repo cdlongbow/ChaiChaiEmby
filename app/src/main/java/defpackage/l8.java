@@ -278,7 +278,7 @@ public final class l8 implements Function4 {
                                 String str7 = string3 != null ? string3 : "";
                                 if (StringsKt.isBlank(str7)) {
                                     strE = null;
-                                } else if (StringsKt__StringsKt.contains$default(str7, (CharSequence) ".", false, 2, (Object) null)) {
+                                } else if (StringsKt__str7.contains(".")) {
                                     strE = "P".concat(str7);
                                 } else {
                                     StringBuilder sb2 = new StringBuilder();
@@ -347,18 +347,18 @@ public final class l8 implements Function4 {
                                 }
                                 lowerCase = CollectionsKt___CollectionsKt.joinToString$default(CollectionsKt.listOfNotNull((Object[]) new String[]{videoType, videoRangeType, videoRange, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, displayTitle, title, colorTransfer, colorSpace, colorPrimaries, mediaSource.getName(), mediaSource.getPath()}), " ", null, null, 0, null, null, 62, null).toLowerCase(Locale.ROOT);
                                 lowerCase.getClass();
-                                if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "dolbyvision", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "dolby vision", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "dovi", false, 2, (Object) null)) {
+                                if (!StringsKt__lowerCase.contains("dolbyvision") || StringsKt__lowerCase.contains("dolby vision") || StringsKt__lowerCase.contains("dovi")) {
                                     if (strE != null) {
                                         strR = mr.r("DV(", strE, ")");
                                     } else {
                                         strR = "DV";
                                     }
-                                } else if (StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr10+", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr10plus", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr 10+", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr 10 plus", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr10 plus", false, 2, (Object) null)) {
+                                } else if (StringsKt__lowerCase.contains("hdr10+") || StringsKt__lowerCase.contains("hdr10plus") || StringsKt__lowerCase.contains("hdr 10+") || StringsKt__lowerCase.contains("hdr 10 plus") || StringsKt__lowerCase.contains("hdr10 plus")) {
                                     strR = "HDR10+";
-                                } else if (StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr10", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr 10", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "smpte2084", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "smpte 2084", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "st 2084", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "pq10", false, 2, (Object) null)) {
+                                } else if (StringsKt__lowerCase.contains("hdr10") || StringsKt__lowerCase.contains("hdr 10") || StringsKt__lowerCase.contains("smpte2084") || StringsKt__lowerCase.contains("smpte 2084") || StringsKt__lowerCase.contains("st 2084") || StringsKt__lowerCase.contains("pq10")) {
                                     strR = "HDR10";
                                 } else {
-                                    strR = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "hdr", false, 2, (Object) null) ? "HDR" : "SDR";
+                                    strR = StringsKt__lowerCase.contains("hdr") ? "HDR" : "SDR";
                                 }
                                 listCreateListBuilder.add(strR);
                                 bitrate = mediaSource.getBitrate();
@@ -448,7 +448,7 @@ public final class l8 implements Function4 {
                             }
                             lowerCase = CollectionsKt___CollectionsKt.joinToString$default(CollectionsKt.listOfNotNull((Object[]) new String[]{videoType2, videoRangeType, videoRange, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, displayTitle, title, colorTransfer, colorSpace, colorPrimaries, mediaSource.getName(), mediaSource.getPath()}), " ", null, null, 0, null, null, 62, null).toLowerCase(Locale.ROOT);
                             lowerCase.getClass();
-                            if (StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "dolbyvision", false, 2, (Object) null)) {
+                            if (StringsKt__lowerCase.contains("dolbyvision")) {
                                 if (strE != null) {
                                     strR = mr.r("DV(", strE, ")");
                                 } else {

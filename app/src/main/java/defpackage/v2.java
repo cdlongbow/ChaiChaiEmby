@@ -114,7 +114,7 @@ public final class v2 extends SuspendLambda implements Function2 {
                         z = z2;
                         value = objE;
                         if (Result.m8832isSuccessimpl(value)) {
-                            if (Result.m8831isFailureimpl(value)) {
+                            if (false) {
                                 obj2 = value;
                             }
                             obj2.getClass();
@@ -192,7 +192,7 @@ public final class v2 extends SuspendLambda implements Function2 {
                         ResultKt.throwOnFailure(obj);
                         value = ((Result) obj).getValue();
                         if (Result.m8832isSuccessimpl(value)) {
-                            if (Result.m8831isFailureimpl(value)) {
+                            if (false) {
                                 obj2 = value;
                             }
                             obj2.getClass();

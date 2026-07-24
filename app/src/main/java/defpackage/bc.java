@@ -6,11 +6,9 @@ import com.dh.myembyapp.data.model.DarkThemeGlowPosition;
 import com.dh.myembyapp.data.model.DarkThemeStyle;
 import com.dh.myembyapp.data.model.LightThemeBackgroundStyle;
 import com.google.gson.annotations.SerializedName;
-import kotlin.Metadata;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001R\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u001a\u0010\b\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u001a\u0010\r\u001a\u00020\f8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\r\u0010\u000e\u001a\u0004\b\u000f\u0010\u0010R\u001a\u0010\u0012\u001a\u00020\u00118\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0014\u0010\u0015R\u001a\u0010\u0017\u001a\u00020\u00168\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0017\u0010\u0018\u001a\u0004\b\u0019\u0010\u001aR\u001a\u0010\u001b\u001a\u00020\u00168\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u001b\u0010\u0018\u001a\u0004\b\u001c\u0010\u001aR\u001a\u0010\u001e\u001a\u00020\u001d8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u001e\u0010\u001f\u001a\u0004\b \u0010!¨\u0006\""}, d2 = {"Lbc;", "", "Lcom/dh/myembyapp/data/model/AppThemePreset;", "preset", "Lcom/dh/myembyapp/data/model/AppThemePreset;", "g", "()Lcom/dh/myembyapp/data/model/AppThemePreset;", "Lcom/dh/myembyapp/data/model/LightThemeBackgroundStyle;", "lightBackgroundStyle", "Lcom/dh/myembyapp/data/model/LightThemeBackgroundStyle;", "f", "()Lcom/dh/myembyapp/data/model/LightThemeBackgroundStyle;", "Lcom/dh/myembyapp/data/model/DarkThemeStyle;", "darkThemeStyle", "Lcom/dh/myembyapp/data/model/DarkThemeStyle;", "d", "()Lcom/dh/myembyapp/data/model/DarkThemeStyle;", "Lcom/dh/myembyapp/data/model/DarkThemeGlowPosition;", "darkThemeGlowPosition", "Lcom/dh/myembyapp/data/model/DarkThemeGlowPosition;", "c", "()Lcom/dh/myembyapp/data/model/DarkThemeGlowPosition;", "", "accentFollowsTheme", "Z", CmcdData.OBJECT_TYPE_AUDIO_ONLY, "()Z", "detachedFocusBorderEnabled", "e", "", "cardSizeLevel", "I", "b", "()I", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class bc {
+public final  class bc {
 
     @SerializedName("accentFollowsTheme")
     private final boolean accentFollowsTheme;

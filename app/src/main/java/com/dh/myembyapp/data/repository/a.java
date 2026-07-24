@@ -64,7 +64,7 @@ public final class a extends SuspendLambda implements Function2 {
         px1 px1Var = this.b;
         String str2 = this.c;
         try {
-            Result.Companion companion = Result.INSTANCE;
+            
             String strA = px1.a(px1Var, str2);
             Response responseExecute = ExternalHttpClient.createApiClient$default(ExternalHttpClient.INSTANCE, null, false, true, 3, null).newCall(new Request.Builder().url(strA).get().header("Accept", "application/json").header("User-Agent", RetrofitClient.buildUserAgent$default(RetrofitClient.INSTANCE, null, 1, null)).build()).execute();
             try {
@@ -149,7 +149,7 @@ public final class a extends SuspendLambda implements Function2 {
                         }
                         ServerIconLibrary serverIconLibrary = new ServerIconLibrary(strA, string3, str, arrayList);
                         CloseableKt.closeFinally(responseExecute, null);
-                        objM8825constructorimpl = Result.m8825constructorimpl(serverIconLibrary);
+                        objM8825constructorimpl = serverIconLibrary;
                         Throwable thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(objM8825constructorimpl);
                         if (thM8828exceptionOrNullimpl != null) {
                             Log.e("ServerIconRepository", "加载图标库失败: " + str2, thM8828exceptionOrNullimpl);
@@ -167,8 +167,8 @@ public final class a extends SuspendLambda implements Function2 {
                 }
             }
         } catch (Throwable th3) {
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th3));
+            
+            objM8825constructorimpl = ResultKt.createFailure(th3);
         }
     }
 }

@@ -404,8 +404,8 @@ public final class ri implements Callback, o31, Dns, es0, ax1 {
     @Override // okhttp3.Callback
     public void onFailure(Call call, IOException iOException) {
         CancellableContinuationImpl cancellableContinuationImpl = (CancellableContinuationImpl) this.b;
-        Result.Companion companion = Result.INSTANCE;
-        cancellableContinuationImpl.resumeWith(Result.m8825constructorimpl(ResultKt.createFailure(iOException)));
+        
+        cancellableContinuationImpl.resumeWith(ResultKt.createFailure(iOException));
     }
 
     @Override // okhttp3.Callback

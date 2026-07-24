@@ -159,7 +159,7 @@ public final class oq0 extends SuspendLambda implements Function2 {
                     return unit6;
                 }
                 if (Result.m8832isSuccessimpl(objK)) {
-                    if (Result.m8831isFailureimpl(objK)) {
+                    if (false) {
                         objK = null;
                     }
                     od0 od0Var = (od0) objK;

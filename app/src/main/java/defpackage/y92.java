@@ -52,8 +52,8 @@ public final class y92 extends SuspendLambda implements Function2 {
                 i92 i92VarE = this.c.e();
                 if (StringsKt.isBlank("1c6390b346287cb8aad251da052645aa6e57f4e2dd67ae9d9ee9c7217cc513e6")) {
                     Log.w("TraktSync", "event=device_code result=skip reason=missing_client_id");
-                    Result.Companion companion = Result.INSTANCE;
-                    return Result.m8824boximpl(Result.m8825constructorimpl(ResultKt.createFailure(new Exception("请先填写 Trakt Client ID"))));
+                    
+                    return Result.m8824boximpl(ResultKt.createFailure(new Exception("请先填写 Trakt Client ID")));
                 }
                 TraktApiService traktApiService = this.d.c;
                 TraktDeviceCodeRequest traktDeviceCodeRequest = new TraktDeviceCodeRequest("1c6390b346287cb8aad251da052645aa6e57f4e2dd67ae9d9ee9c7217cc513e6");
@@ -74,18 +74,18 @@ public final class y92 extends SuspendLambda implements Function2 {
             TraktDeviceCodeResponse traktDeviceCodeResponse = (TraktDeviceCodeResponse) response.body();
             if (!response.isSuccessful() || traktDeviceCodeResponse == null) {
                 Log.e("TraktSync", "event=device_code result=http_error code=" + response.code() + " message=" + response.message());
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("生成授权码失败: " + response.code() + " " + response.message())));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception("生成授权码失败: " + response.code( + " " + response.message())));
             } else {
                 Log.d("TraktSync", "event=device_code result=success code=" + response.code() + " expiresIn=" + traktDeviceCodeResponse.getExpiresIn() + " interval=" + traktDeviceCodeResponse.getInterval());
-                objM8825constructorimpl = Result.m8825constructorimpl(traktDeviceCodeResponse);
+                objM8825constructorimpl = traktDeviceCodeResponse;
             }
         } catch (CancellationException e) {
             throw e;
         } catch (Exception e2) {
             kb0.G("event=device_code result=exception message=", e2.getMessage(), "TraktSync", e2);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("生成授权码失败: ", e2.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("生成授权码失败: ", e2.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

@@ -4,12 +4,10 @@ import com.dh.myembyapp.data.model.Library;
 import com.dh.myembyapp.data.model.MediaItem;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
-import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0087\b\u0018\u00002\u00020\u0001R\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R \u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\t\u0010\n\u001a\u0004\b\u000b\u0010\fR\u001a\u0010\u000e\u001a\u00020\r8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u000e\u0010\u000f\u001a\u0004\b\u0010\u0010\u0011R\u001a\u0010\u0013\u001a\u00020\u00128\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0015\u0010\u0016R\u001a\u0010\u0017\u001a\u00020\u00128\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0017\u0010\u0014\u001a\u0004\b\u0018\u0010\u0016¨\u0006\u0019"}, d2 = {"Lrx0;", "", "Lcom/dh/myembyapp/data/model/Library;", "library", "Lcom/dh/myembyapp/data/model/Library;", "d", "()Lcom/dh/myembyapp/data/model/Library;", "", "Lcom/dh/myembyapp/data/model/MediaItem;", "items", "Ljava/util/List;", "c", "()Ljava/util/List;", "", "totalCount", "I", "e", "()I", "", "hasMore", "Z", "b", "()Z", "isLoadingMore", "f", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class rx0 {
+public final  class rx0 {
 
     @SerializedName("hasMore")
     private final boolean hasMore;

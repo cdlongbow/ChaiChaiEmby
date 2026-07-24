@@ -3,7 +3,6 @@ package com.dh.myembyapp.server;
 import android.util.Log;
 import fi.iki.elonen.NanoHTTPD;
 import java.util.HashMap;
-import kotlin.Metadata;
 import kotlin.Result;
 import kotlin.ResultKt;
 import kotlin.Unit;
@@ -13,7 +12,6 @@ import kotlin.text.StringsKt;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0002\u0018\u00002\u00020\u0001B+\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\b0\u0007¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000fH\u0016J\b\u0010\u0010\u001a\u00020\rH\u0002J\u0010\u0010\u0011\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000fH\u0002R\u001a\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\b0\u0007X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0005X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, d2 = {"Lcom/dh/myembyapp/server/ServerIconLibraryInputServer;", "Lfi/iki/elonen/NanoHTTPD;", "port", "", "initialUrl", "", "onUrlReceived", "Lkotlin/Function1;", "", "<init>", "(ILjava/lang/String;Lkotlin/jvm/functions/Function1;)V", "escapedInitialUrl", "serve", "Lfi/iki/elonen/NanoHTTPD$Response;", "session", "Lfi/iki/elonen/NanoHTTPD$IHTTPSession;", "serveHtml", "handleSave", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
 final class ServerIconLibraryInputServer extends NanoHTTPD {
     private final String escapedInitialUrl;
     private final Function1<String, Unit> onUrlReceived;
@@ -25,7 +23,7 @@ final class ServerIconLibraryInputServer extends NanoHTTPD {
         str.getClass();
         function1.getClass();
         this.onUrlReceived = function1;
-        this.escapedInitialUrl = StringsKt.replace$default(StringsKt.replace$default(StringsKt.replace$default(StringsKt.replace$default(str, "&", "&amp;", false, 4, (Object) null), "\"", "&quot;", false, 4, (Object) null), "<", "&lt;", false, 4, (Object) null), ">", "&gt;", false, 4, (Object) null);
+        this.escapedInitialUrl = StringsKt.replace$default(StringsKt.replace$default(StringsKt.replace$default(str.replace("&", "&amp;"), "\"", "&quot;", false, 4, (Object) null), "<", "&lt;", false, 4, (Object) null), ">", "&gt;", false, 4, (Object) null);
     }
 
     private final NanoHTTPD.Response handleSave(NanoHTTPD.IHTTPSession session) {
@@ -45,14 +43,14 @@ final class ServerIconLibraryInputServer extends NanoHTTPD {
                 return responseNewFixedLengthResponse;
             }
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(new JSONObject(str));
+                
+                objM8825constructorimpl = new JSONObject(str);
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
             String string = null;
-            if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+            if (false) {
                 objM8825constructorimpl = null;
             }
             JSONObject jSONObject = (JSONObject) objM8825constructorimpl;

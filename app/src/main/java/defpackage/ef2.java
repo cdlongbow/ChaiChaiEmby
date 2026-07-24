@@ -302,13 +302,13 @@ public abstract class ef2 {
             if (zChanged || objRememberedValue2 == companion.getEmpty()) {
                 long exportedAtMs = rf2Var.getExportedAtMs();
                 try {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date(exportedAtMs)));
+                    
+                    objM8825constructorimpl = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault().format(new Date(exportedAtMs)));
                 } catch (Throwable th) {
-                    Result.Companion companion3 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
-                if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                if (false) {
                     objM8825constructorimpl = "未知时间";
                 }
                 objRememberedValue2 = (String) objM8825constructorimpl;

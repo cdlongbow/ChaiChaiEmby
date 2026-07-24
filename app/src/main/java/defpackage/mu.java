@@ -139,8 +139,8 @@ public final class mu implements o12, LayoutModifier {
         while (i < size) {
             Object obj = arrayList.get(i);
             i++;
-            Result.Companion companion = Result.INSTANCE;
-            ((Continuation) obj).resumeWith(Result.m8825constructorimpl(Unit.INSTANCE));
+            
+            ((Continuation) obj).resumeWith(Unit.INSTANCE);
         }
     }
 

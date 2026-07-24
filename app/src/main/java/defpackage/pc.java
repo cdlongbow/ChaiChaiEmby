@@ -126,11 +126,11 @@ public final class pc {
         ProxyConfig proxyConfig = lr1.b;
         if (proxyConfig.getEnabled() && !StringsKt.isBlank(proxyConfig.getHost())) {
             try {
-                Result.Companion companion = Result.INSTANCE;
+                
                 return h(ExternalHttpClient.createApiClient$default(ExternalHttpClient.INSTANCE, ExternalHttpClient.RouteMode.FORCE_PROXY, false, true, 2, null), request);
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(Result.m8825constructorimpl(ResultKt.createFailure(th)));
+                
+                thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(ResultKt.createFailure(th));
                 if (thM8828exceptionOrNullimpl != null) {
                     Log.e("AppUpdateRepository", "代理检查更新失败，准备回退直连: " + thM8828exceptionOrNullimpl.getMessage(), thM8828exceptionOrNullimpl);
                 }

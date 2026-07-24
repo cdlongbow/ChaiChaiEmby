@@ -81,20 +81,20 @@ public final class gf0 extends SuspendLambda implements Function2 {
             Response response = (Response) objReportPlaybackProgress;
             if (response.isSuccessful()) {
                 Log.d("EmbyPlaybackReport", "api=Progress success ItemId=" + str);
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(Unit.INSTANCE);
+                
+                objM8825constructorimpl = Unit.INSTANCE;
             } else {
                 Log.e("EmbyPlaybackReport", "api=Progress failure ItemId=" + str + ", code=" + response.code() + ", message=" + response.message());
-                Result.Companion companion2 = Result.INSTANCE;
+                
                 String strMessage = response.message();
                 StringBuilder sb = new StringBuilder("上报进度失败: ");
                 sb.append(strMessage);
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(sb.toString())));
+                objM8825constructorimpl = ResultKt.createFailure(new Exception(sb.toString()));
             }
         } catch (Exception e) {
             kb0.G("api=Progress exception ItemId=", str, "EmbyPlaybackReport", e);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

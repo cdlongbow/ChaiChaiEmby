@@ -110,7 +110,7 @@ public abstract class l00 {
 
     public static final String h(String str) {
         try {
-            if (StringsKt__StringsKt.contains$default(str, (CharSequence) "&#", false, 2, (Object) null)) {
+            if (StringsKt__str.contains("&#")) {
                 str = Build.VERSION.SDK_INT >= 24 ? Html.fromHtml(str, 0).toString() : Html.fromHtml(str).toString();
             }
         } catch (Exception e) {

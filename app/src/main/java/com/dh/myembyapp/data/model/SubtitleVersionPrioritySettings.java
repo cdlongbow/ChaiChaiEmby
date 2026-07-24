@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.IntIterator;
 import kotlin.collections.MapsKt;
@@ -20,8 +19,7 @@ import kotlin.ranges.IntRange;
 import kotlin.ranges.RangesKt;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\f\b\u0087\b\u0018\u0000 &2\u00020\u0001:\u0001&BC\u0012\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\u0014\b\u0002\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0006\u0012\u0014\b\u0002\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\b0\u0006¢\u0006\u0004\b\u000b\u0010\fJ\u0006\u0010\u0012\u001a\u00020\u0000J\u000e\u0010\u0013\u001a\u00020\b2\u0006\u0010\u0014\u001a\u00020\u0007J\u000e\u0010\u0015\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\nJ\u0006\u0010\u0017\u001a\u00020\u0018J\u0006\u0010\u0019\u001a\u00020\u0018J\u0006\u0010\u001a\u001a\u00020\u001bJ\u0014\u0010\u001c\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0006H\u0002J\u0014\u0010\u001d\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\b0\u0006H\u0002J\u000f\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0003J\u0015\u0010\u001f\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0006HÆ\u0003J\u0015\u0010 \u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\b0\u0006HÆ\u0003JE\u0010!\u001a\u00020\u00002\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\u0014\b\u0002\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b0\u00062\u0014\b\u0002\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\b0\u0006HÆ\u0001J\u0014\u0010\"\u001a\u00020\u00182\b\u0010#\u001a\u0004\u0018\u00010\u0001HÖ\u0083\u0004J\n\u0010$\u001a\u00020\bHÖ\u0081\u0004J\n\u0010%\u001a\u00020\u001bHÖ\u0081\u0004R\u0017\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u001d\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u001d\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\b0\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0010¨\u0006'"}, d2 = {"Lcom/dh/myembyapp/data/model/SubtitleVersionPrioritySettings;", "", "sortTypes", "", "Lcom/dh/myembyapp/data/model/SubtitlePrioritySortType;", "languagePriorities", "", "Lcom/dh/myembyapp/data/model/SubtitleLanguagePriorityType;", "", "formatPriorities", "Lcom/dh/myembyapp/data/model/SubtitleFormatPriorityType;", "<init>", "(Ljava/util/List;Ljava/util/Map;Ljava/util/Map;)V", "getSortTypes", "()Ljava/util/List;", "getLanguagePriorities", "()Ljava/util/Map;", "getFormatPriorities", "normalized", "languagePriorityFor", "languageType", "formatPriorityFor", "formatType", "hasLanguagePriority", "", "hasFormatPriority", "buildPreviewText", "", "normalizedLanguagePriorities", "normalizedFormatPriorities", "component1", "component2", "component3", "copy", "equals", "other", "hashCode", "toString", "Companion", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class SubtitleVersionPrioritySettings {
+public final  class SubtitleVersionPrioritySettings {
     private static final SubtitleVersionPrioritySettings DEFAULT;
     private static final Map<SubtitleFormatPriorityType, Integer> DEFAULT_FORMAT_PRIORITIES;
     private static final Map<SubtitleLanguagePriorityType, Integer> DEFAULT_LANGUAGE_PRIORITIES;
@@ -33,11 +31,10 @@ public final /* data */ class SubtitleVersionPrioritySettings {
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    public static final int $stable = 8;
+    
     private static final List<SubtitlePrioritySortType> DEFAULT_SORT_TYPES = CollectionsKt.listOf((Object[]) new SubtitlePrioritySortType[]{SubtitlePrioritySortType.LANGUAGE, SubtitlePrioritySortType.FORMAT});
 
-    @Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000e\u0010\u0018\u001a\u00020\u00052\u0006\u0010\u0019\u001a\u00020\u0005J\u000e\u0010\u001a\u001a\u00020\u00052\u0006\u0010\u0019\u001a\u00020\u0005J\u0018\u0010\u001b\u001a\u00020\u00052\u0006\u0010\u0019\u001a\u00020\u00052\u0006\u0010\u001c\u001a\u00020\u0005H\u0002J\u001a\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\t0\b2\f\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\t0\bJ&\u0010\u001f\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u00050\r2\u0012\u0010 \u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u00050\rJ&\u0010!\u001a\u000e\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00050\r2\u0012\u0010 \u001a\u000e\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00050\rJ\u000e\u0010\"\u001a\u00020#2\u0006\u0010$\u001a\u00020\u0015J\u000e\u0010%\u001a\u00020#2\u0006\u0010$\u001a\u00020\u0015R\u000e\u0010\u0004\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0005X\u0086T¢\u0006\u0002\n\u0000R\u0017\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u001d\u0010\f\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020\u00050\r¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u001d\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00050\r¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0010R\u0011\u0010\u0014\u001a\u00020\u0015¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017¨\u0006&"}, d2 = {"Lcom/dh/myembyapp/data/model/SubtitleVersionPrioritySettings$Companion;", "", "<init>", "()V", "MAX_LANGUAGE_PRIORITY", "", "MAX_FORMAT_PRIORITY", "DEFAULT_SORT_TYPES", "", "Lcom/dh/myembyapp/data/model/SubtitlePrioritySortType;", "getDEFAULT_SORT_TYPES", "()Ljava/util/List;", "DEFAULT_LANGUAGE_PRIORITIES", "", "Lcom/dh/myembyapp/data/model/SubtitleLanguagePriorityType;", "getDEFAULT_LANGUAGE_PRIORITIES", "()Ljava/util/Map;", "DEFAULT_FORMAT_PRIORITIES", "Lcom/dh/myembyapp/data/model/SubtitleFormatPriorityType;", "getDEFAULT_FORMAT_PRIORITIES", "DEFAULT", "Lcom/dh/myembyapp/data/model/SubtitleVersionPrioritySettings;", "getDEFAULT", "()Lcom/dh/myembyapp/data/model/SubtitleVersionPrioritySettings;", "cycleLanguagePriority", "value", "cycleFormatPriority", "cyclePriority", "maxPriority", "normalizeSortTypes", "sortTypes", "normalizeLanguagePriorities", "priorities", "normalizeFormatPriorities", "buildLanguagePriorityText", "", "settings", "buildFormatPriorityText", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-    public static final class Companion {
+        public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
@@ -194,8 +191,7 @@ public final /* data */ class SubtitleVersionPrioritySettings {
         }
     }
 
-    @Metadata(k = 3, mv = {2, 3, 0}, xi = 48)
-    public static final /* synthetic */ class WhenMappings {
+        public static final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
         static {

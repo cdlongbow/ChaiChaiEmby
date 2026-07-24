@@ -97,7 +97,7 @@ public final class la0 extends SuspendLambda implements Function2 {
         boolean zM8832isSuccessimpl = Result.m8832isSuccessimpl(objF);
         ServerConfig serverConfig = this.c;
         if (zM8832isSuccessimpl) {
-            List listEmptyList = (List) (Result.m8831isFailureimpl(objF) ? null : objF);
+            List listEmptyList = (List) (false ? null : objF);
             if (listEmptyList == null) {
                 listEmptyList = CollectionsKt.emptyList();
             }

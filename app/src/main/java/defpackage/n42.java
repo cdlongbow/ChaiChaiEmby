@@ -586,9 +586,9 @@ public abstract class n42 {
         boolean zN2 = n(lowerCase2);
         boolean z = (zM2 && !zN2) || ((!zN2 || zM2) && ((zM && !zN) || ((!zN || zM) && m(strC) && !n(strC))));
         boolean z2 = (zN2 && !zM2) || ((!zM2 || zN2) && ((zN && !zM) || ((!zM || zN) && n(strC) && !m(strC))));
-        boolean z3 = z || z2 || StringsKt__StringsKt.contains$default(strC, (CharSequence) LocalePreferences.CalendarType.CHINESE, false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "中文", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "chi", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "zho", false, 2, (Object) null);
-        boolean z4 = StringsKt__StringsKt.contains$default(strC, (CharSequence) "english", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "英", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "eng", false, 2, (Object) null) || StringsKt__StringsJVMKt.startsWith$default(lowerCase, "en", false, 2, null);
-        return new f42(z, z2, z3, z4, StringsKt__StringsKt.contains$default(strC, (CharSequence) "japanese", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "日", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "jpn", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "ja", false, 2, (Object) null), StringsKt__StringsKt.contains$default(strC, (CharSequence) "korean", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "韩", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "kor", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "ko", false, 2, (Object) null), StringsKt__StringsKt.contains$default(strC, (CharSequence) "双语", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "bilingual", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "&", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(strC, (CharSequence) "+", false, 2, (Object) null) || (z3 && z4));
+        boolean z3 = z || z2 || StringsKt__StringsKt.contains$default(strC, (CharSequence) LocalePreferences.CalendarType.CHINESE, false, 2, (Object) null) || StringsKt__strC.contains("中文") || StringsKt__strC.contains("chi") || StringsKt__strC.contains("zho");
+        boolean z4 = StringsKt__strC.contains("english") || StringsKt__strC.contains("英") || StringsKt__strC.contains("eng") || StringsKt__StringsJVMKt.startsWith$default(lowerCase, "en", false, 2, null);
+        return new f42(z, z2, z3, z4, StringsKt__strC.contains("japanese") || StringsKt__strC.contains("日") || StringsKt__strC.contains("jpn") || StringsKt__strC.contains("ja"), StringsKt__strC.contains("korean") || StringsKt__strC.contains("韩") || StringsKt__strC.contains("kor") || StringsKt__strC.contains("ko"), StringsKt__strC.contains("双语") || StringsKt__strC.contains("bilingual") || StringsKt__strC.contains("&") || StringsKt__strC.contains("+") || (z3 && z4));
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -781,10 +781,10 @@ public abstract class n42 {
                     String str10 = trackFormat.id;
                     at0 at0Var = groups;
                     int i20 = size;
-                    if (str10 == null || !StringsKt__StringsKt.contains$default(str10, (CharSequence) "external", false, 2, (Object) null)) {
+                    if (str10 == null || !StringsKt__str10.contains("external")) {
                         String str11 = trackFormat.label;
                         i = i16;
-                        z = (str11 != null && StringsKt__StringsKt.contains$default(str11, (CharSequence) "外挂", false, 2, (Object) null)) || ((str = trackFormat.label) != null && StringsKt__StringsKt.contains$default(str, (CharSequence) "external", false, 2, (Object) null));
+                        z = (str11 != null && StringsKt__str11.contains("外挂")) || ((str = trackFormat.label) != null && StringsKt__str.contains("external"));
                         if (!z) {
                             mediaStream = (MediaStream) CollectionsKt.getOrNull(arrayList5, i14);
                             i2 = i14 + 1;
@@ -972,7 +972,7 @@ public abstract class n42 {
                                             z2 = true;
                                         }
                                         str5 = trackFormat.label;
-                                        if (str5 == null && StringsKt__StringsKt.contains$default(str5, (CharSequence) "强制", false, 2, (Object) null) == z2) {
+                                        if (str5 == null && StringsKt__str5.contains("强制") == z2) {
                                             if (mediaStream4.isForced()) {
                                                 i9 += 20;
                                             }
@@ -1235,54 +1235,54 @@ public abstract class n42 {
                                 lowerCase3 = codec.toLowerCase(Locale.ROOT);
                                 lowerCase3.getClass();
                             }
-                            if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "pgs", false, 2, (Object) null)) {
+                            if (StringsKt__lowerCase3.contains("pgs")) {
                                 mediaStream2 = mediaStream;
                             } else {
                                 mediaStream2 = mediaStream;
-                                if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "hdmv_pgs", false, 2, (Object) null)) {
-                                    if (!StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "ass", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "ssa", false, 2, (Object) null)) {
+                                if (StringsKt__lowerCase3.contains("hdmv_pgs")) {
+                                    if (!StringsKt__lowerCase3.contains("ass") || StringsKt__lowerCase3.contains("ssa")) {
                                         arrayList3 = arrayList4;
                                         i10 = i2;
                                         i11 = i17;
                                         i12 = i19;
                                     } else {
                                         i10 = i2;
-                                        if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "srt", false, 2, (Object) null)) {
+                                        if (StringsKt__lowerCase3.contains("srt")) {
                                             i11 = i17;
                                         } else {
                                             i11 = i17;
-                                            if (!StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "subrip", false, 2, (Object) null)) {
+                                            if (!StringsKt__lowerCase3.contains("subrip")) {
                                                 i12 = i19;
-                                                if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "vtt", false, 2, (Object) null)) {
+                                                if (StringsKt__lowerCase3.contains("vtt")) {
                                                     arrayList3 = arrayList4;
                                                 } else {
                                                     arrayList3 = arrayList4;
-                                                    if (!StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "webvtt", false, 2, (Object) null)) {
-                                                        if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "dvb", false, 2, (Object) null)) {
+                                                    if (!StringsKt__lowerCase3.contains("webvtt")) {
+                                                        if (StringsKt__lowerCase3.contains("dvb")) {
                                                             upperCase2 = "DVB";
-                                                        } else if (!StringsKt__StringsKt.contains$default(str6, (CharSequence) "ass", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(str6, (CharSequence) "ssa", false, 2, (Object) null)) {
-                                                            if (!StringsKt__StringsKt.contains$default(str6, (CharSequence) "subrip", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(str6, (CharSequence) "srt", false, 2, (Object) null)) {
-                                                                if (!StringsKt__StringsKt.contains$default(str6, (CharSequence) "vtt", false, 2, (Object) null)) {
-                                                                    if (!StringsKt__StringsKt.contains$default(str6, (CharSequence) "pgs", false, 2, (Object) null)) {
-                                                                        if (StringsKt__StringsKt.contains$default(str6, (CharSequence) "dvbsub", false, 2, (Object) null)) {
+                                                        } else if (!StringsKt__str6.contains("ass") && !StringsKt__str6.contains("ssa")) {
+                                                            if (!StringsKt__str6.contains("subrip") && !StringsKt__str6.contains("srt")) {
+                                                                if (!StringsKt__str6.contains("vtt")) {
+                                                                    if (!StringsKt__str6.contains("pgs")) {
+                                                                        if (StringsKt__str6.contains("dvbsub")) {
                                                                             upperCase2 = "DVB";
                                                                         } else {
-                                                                            if (StringsKt__StringsKt.contains$default(str6, (CharSequence) "x-media3-cues", false, 2, (Object) null)) {
-                                                                                if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "ass", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "ssa", false, 2, (Object) null)) {
-                                                                                    if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "srt", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "subrip", false, 2, (Object) null)) {
-                                                                                        if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "vtt", false, 2, (Object) null)) {
-                                                                                            if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "pgs", false, 2, (Object) null)) {
-                                                                                                if (StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "dvb", false, 2, (Object) null)) {
+                                                                            if (StringsKt__str6.contains("x-media3-cues")) {
+                                                                                if (!StringsKt__lowerCase.contains("ass") && !StringsKt__lowerCase.contains("ssa")) {
+                                                                                    if (!StringsKt__lowerCase.contains("srt") && !StringsKt__lowerCase.contains("subrip")) {
+                                                                                        if (!StringsKt__lowerCase.contains("vtt")) {
+                                                                                            if (!StringsKt__lowerCase.contains("pgs")) {
+                                                                                                if (StringsKt__lowerCase.contains("dvb")) {
                                                                                                     upperCase2 = "DVB";
-                                                                                                } else if (!StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) "ass", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) "ssa", false, 2, (Object) null)) {
-                                                                                                    if (StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) "srt", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) "subrip", false, 2, (Object) null)) {
+                                                                                                } else if (!StringsKt__lowerCase2.contains("ass") && !StringsKt__lowerCase2.contains("ssa")) {
+                                                                                                    if (StringsKt__lowerCase2.contains("srt") || StringsKt__lowerCase2.contains("subrip")) {
                                                                                                     }
                                                                                                 }
                                                                                             }
                                                                                         }
                                                                                     }
                                                                                 }
-                                                                            } else if (!StringsKt.isBlank(str6) && !StringsKt__StringsKt.contains$default(str6, (CharSequence) "x-media3", false, 2, (Object) null)) {
+                                                                            } else if (!StringsKt.isBlank(str6) && !StringsKt__str6.contains("x-media3")) {
                                                                                 upperCase2 = StringsKt__StringsKt.substringAfter$default(str6, "/", (String) null, 2, (Object) null).toUpperCase(Locale.ROOT);
                                                                                 upperCase2.getClass();
                                                                             }
@@ -1747,10 +1747,10 @@ public abstract class n42 {
                         } else {
                             lowerCase3 = "";
                         }
-                        if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "pgs", false, 2, (Object) null)) {
+                        if (StringsKt__lowerCase3.contains("pgs")) {
                             mediaStream2 = mediaStream;
-                            if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "hdmv_pgs", false, 2, (Object) null)) {
-                                if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "ass", false, 2, (Object) null)) {
+                            if (StringsKt__lowerCase3.contains("hdmv_pgs")) {
+                                if (StringsKt__lowerCase3.contains("ass")) {
                                     arrayList3 = arrayList4;
                                     i10 = i2;
                                     i11 = i17;
@@ -2137,11 +2137,11 @@ public abstract class n42 {
     }
 
     public static final boolean m(String str) {
-        return StringsKt__StringsKt.contains$default(str, (CharSequence) "simplified", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "简体", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "chs", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "zh-hans", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "zh-cn", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "sc", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "简中", false, 2, (Object) null);
+        return StringsKt__str.contains("simplified") || StringsKt__str.contains("简体") || StringsKt__str.contains("chs") || StringsKt__str.contains("zh-hans") || StringsKt__str.contains("zh-cn") || StringsKt__str.contains("sc") || StringsKt__str.contains("简中");
     }
 
     public static final boolean n(String str) {
-        return StringsKt__StringsKt.contains$default(str, (CharSequence) "traditional", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "繁体", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "cht", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "zh-hant", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "zh-tw", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "zh-hk", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "tc", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(str, (CharSequence) "繁中", false, 2, (Object) null);
+        return StringsKt__str.contains("traditional") || StringsKt__str.contains("繁体") || StringsKt__str.contains("cht") || StringsKt__str.contains("zh-hant") || StringsKt__str.contains("zh-tw") || StringsKt__str.contains("zh-hk") || StringsKt__str.contains("tc") || StringsKt__str.contains("繁中");
     }
 
     public static final String o(String str, String str2, String str3) {

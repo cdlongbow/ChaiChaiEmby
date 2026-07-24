@@ -149,7 +149,7 @@ public final class ha0 extends SuspendLambda implements Function2 {
                         objQ = ((Result) obj).getValue();
                     }
                     if (Result.m8832isSuccessimpl(objQ)) {
-                        if (Result.m8831isFailureimpl(objQ)) {
+                        if (false) {
                             objQ = null;
                         }
                         PlaybackInfoResponse playbackInfoResponse = (PlaybackInfoResponse) objQ;
@@ -199,7 +199,7 @@ public final class ha0 extends SuspendLambda implements Function2 {
                         objH = ((Result) obj).getValue();
                     }
                     if (Result.m8832isSuccessimpl(objH)) {
-                        if (!Result.m8831isFailureimpl(objH)) {
+                        if (!false) {
                             obj3 = objH;
                         }
                         List listEmptyList = (List) obj3;
@@ -246,7 +246,7 @@ public final class ha0 extends SuspendLambda implements Function2 {
                         objU = ((Result) obj).getValue();
                     }
                     if (Result.m8832isSuccessimpl(objU)) {
-                        if (!Result.m8831isFailureimpl(objU)) {
+                        if (!false) {
                             obj2 = objU;
                         }
                         List listEmptyList2 = (List) obj2;

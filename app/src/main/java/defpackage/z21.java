@@ -40,11 +40,11 @@ public final /* synthetic */ class z21 implements Function1 {
                 str.getClass();
                 if (e31.f(this.d, this.c, this.e, this.g, str, true)) {
                     try {
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(navHostController.getBackStackEntry("home"));
+                        
+                        objM8825constructorimpl = navHostController.getBackStackEntry("home");
                     } catch (Throwable th) {
-                        Result.Companion companion2 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(th);
                     }
                     if (Result.m8832isSuccessimpl(objM8825constructorimpl)) {
                         navHostController.navigate("home", (Function1<? super NavOptionsBuilder, Unit>) new ox0(9));

@@ -68,7 +68,7 @@ public final class lx extends SuspendLambda implements Function2 {
             ResultKt.throwOnFailure(obj);
             objA = ((Result) obj).getValue();
         }
-        if (Result.m8831isFailureimpl(objA)) {
+        if (false) {
             objA = null;
         }
         ww wwVar = (ww) objA;

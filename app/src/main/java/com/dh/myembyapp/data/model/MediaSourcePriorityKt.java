@@ -15,7 +15,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.TuplesKt;
 import kotlin.collections.CollectionsKt;
@@ -35,11 +34,9 @@ import kotlin.text.StringsKt;
 import kotlin.text.StringsKt;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000T\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\b\u001a\"\u0010\u0000\u001a\b\u0012\u0004\u0012\u00020\u00020\u00012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0005\u001a4\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00020\u00012\u000e\u0010\u0007\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u00012\u000e\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u00012\u0006\u0010\u0004\u001a\u00020\u0005\u001a\u001a\u0010\t\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\u00022\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002H\u0002\u001a4\u0010\f\u001a\u00020\r2\f\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\u000f0\u00012\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u00012\u0006\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0011\u001a\u00020\u0012\u001a(\u0010\u0013\u001a\u0004\u0018\u00010\u00022\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u00052\b\b\u0002\u0010\u0011\u001a\u00020\u0012\u001a\u0012\u0010\u0014\u001a\u0004\u0018\u00010\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0002\u001a*\u0010\u0017\u001a\u00020\r2\b\u0010\u0018\u001a\u0004\u0018\u00010\u00022\b\u0010\u0019\u001a\u0004\u0018\u00010\u00022\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u001b0\u0001H\u0002\u001a\u0018\u0010\u001c\u001a\u00020\r2\u0006\u0010\u0016\u001a\u00020\u00022\u0006\u0010\u001d\u001a\u00020\u001bH\u0002\u001a \u0010\u001e\u001a\u00020\r2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010\u0019\u001a\u00020\u00022\u0006\u0010\u001d\u001a\u00020\u001bH\u0002\u001a\u0012\u0010\u001f\u001a\u00020 2\b\u0010\u0016\u001a\u0004\u0018\u00010\u0002H\u0002\u001a\u0012\u0010!\u001a\u0004\u0018\u00010\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0002\u001a!\u0010\"\u001a\u00020\r2\b\u0010\u0018\u001a\u0004\u0018\u00010#2\b\u0010\u0019\u001a\u0004\u0018\u00010#H\u0002¢\u0006\u0002\u0010$\u001a!\u0010%\u001a\u00020\r2\b\u0010\u0018\u001a\u0004\u0018\u00010#2\b\u0010\u0019\u001a\u0004\u0018\u00010#H\u0002¢\u0006\u0002\u0010$\u001a)\u0010&\u001a\u00020\r2\b\u0010\u0018\u001a\u0004\u0018\u00010#2\b\u0010\u0019\u001a\u0004\u0018\u00010#2\u0006\u0010'\u001a\u00020(H\u0002¢\u0006\u0002\u0010)\u001a\u0019\u0010*\u001a\u0004\u0018\u00010#2\b\u0010\u0016\u001a\u0004\u0018\u00010\u0002H\u0002¢\u0006\u0002\u0010+\u001a\u0014\u0010,\u001a\u0004\u0018\u00010\u00152\b\u0010-\u001a\u0004\u0018\u00010\u0015H\u0002\u001a\u0010\u0010.\u001a\u00020\u00122\u0006\u0010-\u001a\u00020\u0015H\u0002\u001a\u0010\u0010/\u001a\u00020\u00122\u0006\u0010-\u001a\u00020\u0015H\u0002¨\u00060"}, d2 = {"sortMediaSourcesByPriority", "", "Lcom/dh/myembyapp/data/model/MediaSource;", "mediaSources", "settings", "Lcom/dh/myembyapp/data/model/VideoVersionPrioritySettings;", "buildVersionPickerMediaSources", "itemMediaSources", "playbackMediaSources", "mergeVersionPickerMediaSource", "playbackSource", "itemSource", "compareMediaItemsByBestSourcePriority", "", "firstItems", "Lcom/dh/myembyapp/data/model/MediaItem;", "secondItems", "fallbackToBitrateDescending", "", "selectBestMediaSourceByPriority", "buildVideoTypeLabel", "", "source", "compareSourcesByRules", "first", "second", "rules", "Lcom/dh/myembyapp/data/model/VideoPriorityRule;", "resolveFormatPriority", "rule", "compareByRule", "resolveVersionVideoFormat", "Lcom/dh/myembyapp/data/model/VersionVideoFormat;", "buildDynamicRangeLabel", "compareNullableLongDesc", "", "(Ljava/lang/Long;Ljava/lang/Long;)I", "compareNullableLongAsc", "compareByDirection", "direction", "Lcom/dh/myembyapp/data/model/VideoValueSortDirection;", "(Ljava/lang/Long;Ljava/lang/Long;Lcom/dh/myembyapp/data/model/VideoValueSortDirection;)I", "resolveKnownVideoResolutionSortValue", "(Lcom/dh/myembyapp/data/model/MediaSource;)Ljava/lang/Long;", "parseDolbyVisionProfile", "text", "isHdr10PlusText", "isHdr10Text", "app"}, k = 2, mv = {2, 3, 0}, xi = 48)
 public final class MediaSourcePriorityKt {
 
-    @Metadata(k = 3, mv = {2, 3, 0}, xi = 48)
-    public static final /* synthetic */ class WhenMappings {
+        public static final /* synthetic */ class WhenMappings {
         public static final /* synthetic */ int[] $EnumSwitchMapping$0;
         public static final /* synthetic */ int[] $EnumSwitchMapping$1;
         public static final /* synthetic */ int[] $EnumSwitchMapping$2;
@@ -125,7 +122,7 @@ public final class MediaSourcePriorityKt {
         String path = mediaSource != null ? mediaSource.getPath() : null;
         String lowerCase3 = (name + " " + (path != null ? path : "") + " " + lowerCase2).toLowerCase(locale);
         lowerCase3.getClass();
-        if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "dolbyvision", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "dolby vision", false, 2, (Object) null) || StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "dovi", false, 2, (Object) null)) {
+        if (StringsKt__lowerCase3.contains("dolbyvision") || StringsKt__lowerCase3.contains("dolby vision") || StringsKt__lowerCase3.contains("dovi")) {
             return dolbyVisionProfile != null ? mr.r("DV(", dolbyVisionProfile, ")") : "DV";
         }
         if (isHdr10PlusText(lowerCase3)) {
@@ -134,7 +131,7 @@ public final class MediaSourcePriorityKt {
         if (isHdr10Text(lowerCase3)) {
             return "HDR10";
         }
-        if (StringsKt__StringsKt.contains$default(lowerCase3, (CharSequence) "hdr", false, 2, (Object) null)) {
+        if (StringsKt__lowerCase3.contains("hdr")) {
             return "HDR";
         }
         if (mediaSource != null) {
@@ -458,7 +455,7 @@ public final class MediaSourcePriorityKt {
                 string = "";
             }
             if (!StringsKt.isBlank(string)) {
-                if (StringsKt__StringsKt.contains$default(string, (CharSequence) ".", false, 2, (Object) null)) {
+                if (StringsKt__string.contains(".")) {
                     return "P".concat(string);
                 }
                 StringBuilder sb = new StringBuilder();

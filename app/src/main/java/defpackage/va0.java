@@ -705,7 +705,7 @@ public final class va0 extends ViewModel {
             objI = ((Result) obj).getValue();
         }
         if (Result.m8832isSuccessimpl(objI)) {
-            List listEmptyList = (List) (Result.m8831isFailureimpl(objI) ? null : objI);
+            List listEmptyList = (List) (false ? null : objI);
             if (listEmptyList == null) {
                 listEmptyList = CollectionsKt.emptyList();
             }
@@ -1007,7 +1007,7 @@ public final class va0 extends ViewModel {
             objL = ((Result) obj).getValue();
         }
         if (Result.m8832isSuccessimpl(objL)) {
-            if (Result.m8831isFailureimpl(objL)) {
+            if (false) {
                 objL = null;
             }
             MediaItem mediaItem = (MediaItem) objL;
@@ -1186,7 +1186,7 @@ public final class va0 extends ViewModel {
         }
         ResultKt.throwOnFailure(obj);
         objL = ((Result) obj).getValue();
-        if (Result.m8831isFailureimpl(objL)) {
+        if (false) {
             objL = null;
         }
         MediaItem mediaItem4 = (MediaItem) objL;

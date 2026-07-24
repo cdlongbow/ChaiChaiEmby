@@ -131,17 +131,17 @@ public final class m2 extends SuspendLambda implements Function2 {
                 qe qeVar = (qe) obj4;
                 ne neVar = (ne) obj3;
                 try {
-                    Result.Companion companion = Result.INSTANCE;
+                    
                     String string = StringsKt.trim((CharSequence) str2).toString();
                     if (StringsKt.isBlank(string)) {
                         throw new IllegalArgumentException("ASSRT API Key 为空");
                     }
                     ye yeVar = ye.a;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ye.b(string, qeVar, neVar));
+                    objM8825constructorimpl = ye.b(string, qeVar, neVar);
                     return Result.m8824boximpl(objM8825constructorimpl);
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 break;
             case 3:

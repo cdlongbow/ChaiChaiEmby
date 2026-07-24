@@ -158,7 +158,7 @@ public final class r8 extends SuspendLambda implements Function2 {
                     ResultKt.throwOnFailure(obj);
                     objJ = ((Result) obj).getValue();
                 }
-                if (Result.m8831isFailureimpl(objJ)) {
+                if (false) {
                     objJ = null;
                 }
                 od0 od0Var = (od0) objJ;

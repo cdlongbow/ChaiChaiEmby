@@ -173,8 +173,8 @@ public abstract class hi0 {
             if (lowerCase2 == null) {
                 lowerCase2 = "";
             }
-            boolean zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-            boolean zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+            boolean zContains$default = StringsKt__lowerCase.contains(".m3u8");
+            boolean zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
             boolean zH = h(path);
             boolean enableStrmDirectPlay = false;
             if (h(directStreamUrl)) {

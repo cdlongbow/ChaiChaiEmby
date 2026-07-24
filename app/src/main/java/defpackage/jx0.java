@@ -76,11 +76,11 @@ public final /* synthetic */ class jx0 implements Function0 {
                 ((MutableState) obj).setValue(Boolean.TRUE);
                 if (!NavController.popBackStack$default((NavController) navHostController, "server_list", false, false, 4, (Object) null)) {
                     try {
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(navHostController.getBackStackEntry("home"));
+                        
+                        objM8825constructorimpl = navHostController.getBackStackEntry("home");
                     } catch (Throwable th) {
-                        Result.Companion companion2 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(th);
                     }
                     navHostController.navigate("server_list", (Function1<? super NavOptionsBuilder, Unit>) new uo0(Result.m8832isSuccessimpl(objM8825constructorimpl), i2));
                     break;

@@ -26,7 +26,7 @@ public final class s61 extends ProxySelector {
     @Override // java.net.ProxySelector
     public final void connectFailed(URI uri, SocketAddress socketAddress, IOException iOException) {
         String message;
-        if (iOException == null || (message = iOException.getMessage()) == null || !StringsKt__StringsKt.contains$default(message, (CharSequence) "Socket closed", false, 2, (Object) null)) {
+        if (iOException == null || (message = iOException.getMessage()) == null || !StringsKt__message.contains("Socket closed")) {
             Log.e("MyEmbyApp", "图片代理连接失败: " + uri, iOException);
         }
     }

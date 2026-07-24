@@ -62,15 +62,15 @@ public final class ye0 extends SuspendLambda implements Function2 {
             }
             Response response = (Response) obj;
             if (response.isSuccessful()) {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(Unit.INSTANCE);
+                
+                objM8825constructorimpl = Unit.INSTANCE;
             } else {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("隐藏继续观看失败: " + response.message())));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception("隐藏继续观看失败: " + response.message()));
             }
         } catch (Exception e) {
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

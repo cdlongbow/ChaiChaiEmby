@@ -51,11 +51,11 @@ public final class xp implements ww1, zc1 {
         Object obj3 = concurrentHashMap.get(arrayList2);
         if (obj3 == null) {
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl((xv0) ((Function2) this.b).invoke(kClass, arrayList));
+                
+                objM8825constructorimpl = (xv0 ((Function2) this.b).invoke(kClass, arrayList));
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
             Result resultM8824boximpl = Result.m8824boximpl(objM8825constructorimpl);
             Object objPutIfAbsent = concurrentHashMap.putIfAbsent(arrayList2, resultM8824boximpl);

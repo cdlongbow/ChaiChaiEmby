@@ -462,10 +462,10 @@ public final class MyEmbyApp extends Application implements i12 {
                 MyEmbyApp myEmbyApp = this.a;
                 int i = MyEmbyApp.j;
                 boolean z = th instanceof SecurityException;
-                if (z && (message3 = (securityException2 = (SecurityException) th).getMessage()) != null && StringsKt__StringsKt.contains$default(message3, (CharSequence) "com.lenovo.skin", false, 2, (Object) null)) {
+                if (z && (message3 = (securityException2 = (SecurityException) th).getMessage()) != null && StringsKt__message3.contains("com.lenovo.skin")) {
                     Log.w("MyEmbyApp", "忽略联想设备皮肤设置异常（不影响功能）: " + securityException2.getMessage());
                 } else {
-                    if (!z || (message = (securityException = (SecurityException) th).getMessage()) == null || !StringsKt__StringsKt.contains$default(message, (CharSequence) "Settings key", false, 2, (Object) null) || (message2 = securityException.getMessage()) == null || !StringsKt__StringsKt.contains$default(message2, (CharSequence) "is not readable", false, 2, (Object) null)) {
+                    if (!z || (message = (securityException = (SecurityException) th).getMessage()) == null || !StringsKt__message.contains("Settings key") || (message2 = securityException.getMessage()) == null || !StringsKt__message2.contains("is not readable")) {
                         Log.e("MyEmbyApp", "========== 应用崩溃 ==========");
                         Log.e("MyEmbyApp", "线程: " + thread.getName());
                         Log.e("MyEmbyApp", "异常: ".concat(th.getClass().getSimpleName()));

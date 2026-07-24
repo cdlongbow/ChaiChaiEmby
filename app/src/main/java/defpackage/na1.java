@@ -64,11 +64,11 @@ public final class na1 implements Function4 {
             }
             FocusRequester focusRequester = this.i;
             try {
-                Result.Companion companion2 = Result.INSTANCE;
-                Result.m8825constructorimpl(Boolean.valueOf(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null)));
+                
+                Boolean.valueOf(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null));
             } catch (Throwable th) {
-                Result.Companion companion3 = Result.INSTANCE;
-                Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                ResultKt.createFailure(th);
             }
         } else {
             z = false;

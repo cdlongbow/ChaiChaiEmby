@@ -129,11 +129,11 @@ public class aa implements d62, ww1, zc1 {
         Object obj2 = concurrentHashMap2.get(arrayList2);
         if (obj2 == null) {
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl((xv0) ((Function2) this.a).invoke(kClass, arrayList));
+                
+                objM8825constructorimpl = (xv0 ((Function2) this.a).invoke(kClass, arrayList));
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
             Result resultM8824boximpl = Result.m8824boximpl(objM8825constructorimpl);
             Object objPutIfAbsent2 = concurrentHashMap2.putIfAbsent(arrayList2, resultM8824boximpl);

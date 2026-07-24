@@ -58,26 +58,26 @@ public final class we0 extends SuspendLambda implements Function2 {
                 responseExecute.close();
                 if (string.length() == 0) {
                     Log.e("EmbyRepository", "STRM文件内容为空");
-                    Result.Companion companion = Result.INSTANCE;
-                    return Result.m8824boximpl(Result.m8825constructorimpl(ResultKt.createFailure(new Exception("STRM文件内容为空"))));
+                    
+                    return Result.m8824boximpl(ResultKt.createFailure(new Exception("STRM文件内容为空")));
                 }
                 if (!StringsKt__StringsJVMKt.startsWith$default(string, "http://", false, 2, null) && !StringsKt__StringsJVMKt.startsWith$default(string, "https://", false, 2, null)) {
                     Log.e("EmbyRepository", "STRM文件内容不是有效的URL: ".concat(string));
-                    Result.Companion companion2 = Result.INSTANCE;
-                    return Result.m8824boximpl(Result.m8825constructorimpl(ResultKt.createFailure(new Exception("STRM文件内容不是有效的URL"))));
+                    
+                    return Result.m8824boximpl(ResultKt.createFailure(new Exception("STRM文件内容不是有效的URL")));
                 }
                 Log.d("EmbyRepository", "✅ 获取STRM直链成功: ".concat(string));
-                objM8825constructorimpl = Result.m8825constructorimpl(string);
+                objM8825constructorimpl = string;
             } else {
                 Log.e("EmbyRepository", "获取STRM文件失败: HTTP " + responseExecute.code());
                 responseExecute.close();
-                Result.Companion companion3 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("获取STRM文件失败: HTTP " + responseExecute.code())));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception("获取STRM文件失败: HTTP " + responseExecute.code()));
             }
         } catch (Exception e) {
             Log.e("EmbyRepository", "获取STRM文件异常", e);
-            Result.Companion companion4 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("获取STRM文件异常: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("获取STRM文件异常: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

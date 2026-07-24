@@ -98,16 +98,16 @@ public final class oc extends SuspendLambda implements Function2 {
                     String str = this.e;
                     Function1 function1 = this.d;
                     try {
-                        Result.Companion companion = Result.INSTANCE;
+                        
                         Log.i("AppUpdateRepository", "开始使用原始 GitHub 地址下载更新: route=app_proxy_auto, url=" + str);
                         pc.g(okHttpClientBuild, str, file3, function1, "original_github", Boxing.boxLong(8000L));
                         if (!file3.renameTo(file2)) {
                             throw new IOException("临时文件重命名失败");
                         }
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(Unit.INSTANCE);
+                        objM8825constructorimpl2 = Unit.INSTANCE;
                         if (Result.m8832isSuccessimpl(objM8825constructorimpl2)) {
                             Log.i("AppUpdateRepository", "原始 GitHub 地址下载完成: " + file2.getAbsolutePath());
-                            Result resultM8824boximpl = Result.m8824boximpl(Result.m8825constructorimpl(new cc(file2, dc.a, false)));
+                            Result resultM8824boximpl = Result.m8824boximpl(new cc(file2, dc.a, false));
                             pc.b = null;
                             return resultM8824boximpl;
                         }
@@ -139,12 +139,12 @@ public final class oc extends SuspendLambda implements Function2 {
                             throw new IOException("临时文件重命名失败");
                         }
                         Log.i("AppUpdateRepository", "gh-proxy 下载完成: route=force_direct, file=" + file2.getAbsolutePath());
-                        objM8825constructorimpl = Result.m8825constructorimpl(new cc(file2, dc.b, true));
+                        objM8825constructorimpl = new cc(file2, dc.b, true);
                         pc.b = call;
                         return Result.m8824boximpl(objM8825constructorimpl);
                     } catch (Throwable th) {
-                        Result.Companion companion2 = Result.INSTANCE;
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                        
+                        objM8825constructorimpl2 = ResultKt.createFailure(th);
                     }
                 } catch (Exception e) {
                     e = e;
@@ -156,8 +156,8 @@ public final class oc extends SuspendLambda implements Function2 {
                     } else {
                         Log.e("AppUpdateRepository", "下载更新 APK 失败", e);
                     }
-                    Result.Companion companion3 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(e));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(e);
                 }
             } catch (Throwable th2) {
                 th = th2;

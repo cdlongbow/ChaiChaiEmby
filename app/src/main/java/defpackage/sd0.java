@@ -69,8 +69,8 @@ public final class sd0 extends SuspendLambda implements Function2 {
             JsonObject jsonObject = (JsonObject) response.body();
             if (!response.isSuccessful() || jsonObject == null) {
                 Log.w("EmbyRepository", "获取用户转码权限失败: " + response.code() + " " + response.message());
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("获取用户转码权限失败: " + response.message())));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception("获取用户转码权限失败: " + response.message()));
             } else {
                 JsonElement jsonElement2 = jsonObject.get("Policy");
                 if (jsonElement2 == null) {
@@ -91,13 +91,13 @@ public final class sd0 extends SuspendLambda implements Function2 {
                         asBoolean = jsonElement3.getAsBoolean();
                     }
                 }
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(Boxing.boxBoolean(asBoolean));
+                
+                objM8825constructorimpl = Boxing.boxBoolean(asBoolean);
             }
         } catch (Exception e) {
             Log.e("EmbyRepository", "获取用户转码权限异常", e);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

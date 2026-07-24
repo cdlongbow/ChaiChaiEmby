@@ -521,13 +521,13 @@ public final /* synthetic */ class no0 implements Function4 {
                         } else {
                             list = list3;
                         }
-                        Result.Companion companion3 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(navHostController.getBackStackEntry("home"));
+                        
+                        objM8825constructorimpl = navHostController.getBackStackEntry("home");
                     } catch (Throwable th) {
-                        Result.Companion companion4 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(th);
                     }
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                    if (false) {
                         objM8825constructorimpl = null;
                     }
                     objRememberedValue22 = (NavBackStackEntry) objM8825constructorimpl;

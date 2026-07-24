@@ -45,9 +45,9 @@ public final /* synthetic */ class ji1 implements Function1 {
                 } else {
                     lowerCase = null;
                 }
-                if (StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null) || Intrinsics.areEqual(lowerCase, "hls")) {
+                if (StringsKt__lowerCase2.contains(".m3u8") || Intrinsics.areEqual(lowerCase, "hls")) {
                     str = MimeTypes.APPLICATION_M3U8;
-                } else if (StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".mpd", false, 2, (Object) null)) {
+                } else if (StringsKt__lowerCase2.contains(".mpd")) {
                     str = MimeTypes.APPLICATION_MPD;
                 }
                 MediaItem.Builder uri = new MediaItem.Builder().setUri(str2);

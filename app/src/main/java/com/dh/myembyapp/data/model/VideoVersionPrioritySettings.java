@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.Metadata;
 import kotlin.TuplesKt;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.IntIterator;
@@ -19,19 +18,17 @@ import kotlin.ranges.IntRange;
 import kotlin.ranges.RangesKt;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\u0087\b\u0018\u0000 \u00142\u00020\u0001:\u0001\u0014B\u0017\u0012\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\u0006\u0010\t\u001a\u00020\u0000J\u0006\u0010\n\u001a\u00020\u000bJ\u000f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0003J\u0019\u0010\r\u001a\u00020\u00002\u000e\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003HÆ\u0001J\u0014\u0010\u000e\u001a\u00020\u000f2\b\u0010\u0010\u001a\u0004\u0018\u00010\u0001HÖ\u0083\u0004J\n\u0010\u0011\u001a\u00020\u0012HÖ\u0081\u0004J\n\u0010\u0013\u001a\u00020\u000bHÖ\u0081\u0004R\u0017\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b¨\u0006\u0015"}, d2 = {"Lcom/dh/myembyapp/data/model/VideoVersionPrioritySettings;", "", "rules", "", "Lcom/dh/myembyapp/data/model/VideoPriorityRule;", "<init>", "(Ljava/util/List;)V", "getRules", "()Ljava/util/List;", "normalized", "buildPreviewText", "", "component1", "copy", "equals", "", "other", "hashCode", "", "toString", "Companion", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class VideoVersionPrioritySettings {
+public final  class VideoVersionPrioritySettings {
     public static final int MAX_RULE_COUNT = 4;
     private final List<VideoPriorityRule> rules;
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     public static final Companion INSTANCE = new Companion(null);
-    public static final int $stable = 8;
+    
     private static final Map<VideoQualityStandard, Integer> DEFAULT_QUALITY_PRIORITIES = MapsKt.mapOf(TuplesKt.to(VideoQualityStandard.DOVI, 1), TuplesKt.to(VideoQualityStandard.HDR, 1), TuplesKt.to(VideoQualityStandard.SDR, 1));
     private static final VideoVersionPrioritySettings DEFAULT = new VideoVersionPrioritySettings(null == true ? 1 : 0, 1, null == true ? 1 : 0);
 
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u000e\n\u0000\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000e\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u0007J&\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u00052\u0012\u0010\u0012\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u0005J\u001a\u0010\u0013\u001a\u00020\u00142\u0012\u0010\u0012\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u0005R\u001d\u0010\u0004\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u0005¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\n\u001a\u00020\u000b¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u000e\u0010\u000e\u001a\u00020\u0007X\u0086T¢\u0006\u0002\n\u0000¨\u0006\u0015"}, d2 = {"Lcom/dh/myembyapp/data/model/VideoVersionPrioritySettings$Companion;", "", "<init>", "()V", "DEFAULT_QUALITY_PRIORITIES", "", "Lcom/dh/myembyapp/data/model/VideoQualityStandard;", "", "getDEFAULT_QUALITY_PRIORITIES", "()Ljava/util/Map;", "DEFAULT", "Lcom/dh/myembyapp/data/model/VideoVersionPrioritySettings;", "getDEFAULT", "()Lcom/dh/myembyapp/data/model/VideoVersionPrioritySettings;", "MAX_RULE_COUNT", "cycleQualityPriority", "value", "normalizeQualityPriorities", "priorities", "buildQualityPriorityText", "", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-    public static final class Companion {
+        public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }

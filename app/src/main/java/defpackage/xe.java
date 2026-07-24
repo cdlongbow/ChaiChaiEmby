@@ -65,7 +65,7 @@ public final class xe extends SuspendLambda implements Function2 {
         int i = this.e;
         int i2 = this.g;
         try {
-            Result.Companion companion = Result.INSTANCE;
+            
             String string = StringsKt.trim((CharSequence) str).toString();
             if (StringsKt.isBlank(string)) {
                 throw new IllegalArgumentException("ASSRT API Key 为空");
@@ -146,7 +146,7 @@ public final class xe extends SuspendLambda implements Function2 {
                     th = null;
                 }
                 CloseableKt.closeFinally(responseExecute, th);
-                objM8825constructorimpl = Result.m8825constructorimpl(arrayList);
+                objM8825constructorimpl = arrayList;
                 return Result.m8824boximpl(objM8825constructorimpl);
             } catch (Throwable th2) {
                 try {
@@ -157,8 +157,8 @@ public final class xe extends SuspendLambda implements Function2 {
                 }
             }
         } catch (Throwable th4) {
-            Result.Companion companion2 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th4));
+            
+            objM8825constructorimpl = ResultKt.createFailure(th4);
         }
     }
 }

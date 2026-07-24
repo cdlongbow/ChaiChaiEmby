@@ -670,7 +670,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                     obj2 = objL;
                                     if (Result.m8832isSuccessimpl(obj2)) {
                                         try {
-                                            if (Result.m8831isFailureimpl(obj2)) {
+                                            if (false) {
                                                 obj3 = null;
                                             } else {
                                                 obj3 = obj2;
@@ -979,7 +979,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                                 num9 = num6;
                                                 num10 = numN;
                                                 j8 = j5;
-                                                if (Result.m8831isFailureimpl(value)) {
+                                                if (false) {
                                                     obj5 = null;
                                                 } else {
                                                     obj5 = value;
@@ -1963,7 +1963,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                                             j10 = j19;
                                                             str33 = str17;
                                                             if (Result.m8832isSuccessimpl(value2)) {
-                                                                if (Result.m8831isFailureimpl(value2)) {
+                                                                if (false) {
                                                                     value2 = null;
                                                                 }
                                                                 value2.getClass();
@@ -2581,8 +2581,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                                 }
                                                 list5 = mediaSources;
                                                 num11 = num7;
-                                                zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                                zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                                zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                                zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                                 str17 = lowerCase;
                                                 zD = to1.D(path);
                                                 retrofitClient = RetrofitClient.INSTANCE;
@@ -3247,7 +3247,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                             num9 = num6;
                                             num10 = numN;
                                             j8 = j5;
-                                            if (Result.m8831isFailureimpl(value)) {
+                                            if (false) {
                                                 obj5 = null;
                                             } else {
                                                 obj5 = value;
@@ -3776,8 +3776,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                             }
                                             list5 = mediaSources;
                                             num11 = num7;
-                                            zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                            zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                            zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                            zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                             str17 = lowerCase;
                                             zD = to1.D(path);
                                             retrofitClient = RetrofitClient.INSTANCE;
@@ -5938,7 +5938,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                 str = str411;
                                 obj2 = objL;
                                 if (Result.m8832isSuccessimpl(obj2)) {
-                                    if (Result.m8831isFailureimpl(obj2)) {
+                                    if (false) {
                                         obj3 = null;
                                     } else {
                                         obj3 = obj2;
@@ -6188,7 +6188,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                         num9 = num6;
                                         num10 = numN;
                                         j8 = j5;
-                                        if (Result.m8831isFailureimpl(value)) {
+                                        if (false) {
                                             obj5 = null;
                                         } else {
                                             obj5 = value;
@@ -6717,8 +6717,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                         }
                                         list5 = mediaSources;
                                         num11 = num7;
-                                        zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                        zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                        zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                        zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                         str17 = lowerCase;
                                         zD = to1.D(path);
                                         retrofitClient = RetrofitClient.INSTANCE;
@@ -9073,7 +9073,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                     num9 = num6;
                                     num10 = numN;
                                     j8 = j5;
-                                    if (Result.m8831isFailureimpl(value)) {
+                                    if (false) {
                                         obj5 = null;
                                     } else {
                                         obj5 = value;
@@ -9602,8 +9602,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                     }
                                     list5 = mediaSources;
                                     num11 = num7;
-                                    zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                    zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                    zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                    zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                     str17 = lowerCase;
                                     zD = to1.D(path);
                                     retrofitClient = RetrofitClient.INSTANCE;
@@ -11750,7 +11750,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             str43 = "MediaSourceId: ";
                             obj2 = objL;
                             if (Result.m8832isSuccessimpl(obj2)) {
-                                if (Result.m8831isFailureimpl(obj2)) {
+                                if (false) {
                                     obj3 = null;
                                 } else {
                                     obj3 = obj2;
@@ -12000,7 +12000,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                     num9 = num6;
                                     num10 = numN;
                                     j8 = j5;
-                                    if (Result.m8831isFailureimpl(value)) {
+                                    if (false) {
                                         obj5 = null;
                                     } else {
                                         obj5 = value;
@@ -12529,8 +12529,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                     }
                                     list5 = mediaSources;
                                     num11 = num7;
-                                    zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                    zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                    zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                    zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                     str17 = lowerCase;
                                     zD = to1.D(path);
                                     retrofitClient = RetrofitClient.INSTANCE;
@@ -14885,7 +14885,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                 num9 = num6;
                                 num10 = numN;
                                 j8 = j5;
-                                if (Result.m8831isFailureimpl(value)) {
+                                if (false) {
                                     obj5 = null;
                                 } else {
                                     obj5 = value;
@@ -15414,8 +15414,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                                 }
                                 list5 = mediaSources;
                                 num11 = num7;
-                                zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                                zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                                zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                                zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                                 str17 = lowerCase;
                                 zD = to1.D(path);
                                 retrofitClient = RetrofitClient.INSTANCE;
@@ -17749,7 +17749,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             num9 = num6;
                             num10 = numN;
                             j8 = j5;
-                            if (Result.m8831isFailureimpl(value)) {
+                            if (false) {
                                 obj5 = null;
                             } else {
                                 obj5 = value;
@@ -18278,8 +18278,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             }
                             list5 = mediaSources;
                             num11 = num7;
-                            zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                            zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                            zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                            zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                             str17 = lowerCase;
                             zD = to1.D(path);
                             retrofitClient = RetrofitClient.INSTANCE;
@@ -20451,7 +20451,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             videoVersionMemory4 = videoVersionMemory6;
                             videoVersionPrioritySettings4 = videoVersionPrioritySettings7;
                             obj2 = obj12;
-                            if (Result.m8831isFailureimpl(value)) {
+                            if (false) {
                                 obj5 = null;
                             } else {
                                 obj5 = value;
@@ -20980,8 +20980,8 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             }
                             list5 = mediaSources;
                             num11 = num7;
-                            zContains$default = StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".m3u8", false, 2, (Object) null);
-                            zContains$default2 = StringsKt__StringsKt.contains$default(lowerCase2, (CharSequence) ".m3u8", false, 2, (Object) null);
+                            zContains$default = StringsKt__lowerCase.contains(".m3u8");
+                            zContains$default2 = StringsKt__lowerCase2.contains(".m3u8");
                             str17 = lowerCase;
                             zD = to1.D(path);
                             retrofitClient = RetrofitClient.INSTANCE;
@@ -23185,7 +23185,7 @@ public final class lo1 extends SuspendLambda implements Function2 {
                             str14 = "PlayerViewModel";
                             str13 = str44;
                             if (Result.m8832isSuccessimpl(value2)) {
-                                if (Result.m8831isFailureimpl(value2)) {
+                                if (false) {
                                     value2 = null;
                                 }
                                 value2.getClass();

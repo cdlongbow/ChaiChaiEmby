@@ -250,7 +250,7 @@ public abstract /* synthetic */ class i02 {
     }
 
     public static Object n(String str) {
-        return Result.m8825constructorimpl(ResultKt.createFailure(new Exception(str)));
+        return ResultKt.createFailure(new Exception(str));
     }
 
     public static String o(int i, int i2, String str, String str2) {

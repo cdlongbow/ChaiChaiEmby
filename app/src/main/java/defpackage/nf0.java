@@ -63,13 +63,13 @@ public final class nf0 extends SuspendLambda implements Function2 {
                         str = "";
                     }
                     Log.d("EmbyRepository", "详情页 Logo 解析成功(直链): itemId=" + str2 + ", tag=" + str + ", url=" + imageUrl);
-                    objM8825constructorimpl = Result.m8825constructorimpl(imageUrl);
+                    objM8825constructorimpl = imageUrl;
                 } else if (SetsKt.setOf((Object[]) new Integer[]{Boxing.boxInt(HttpStatus.SC_MOVED_PERMANENTLY), Boxing.boxInt(HttpStatus.SC_MOVED_TEMPORARILY), Boxing.boxInt(HttpStatus.SC_SEE_OTHER), Boxing.boxInt(307), Boxing.boxInt(HttpStatusCodesKt.HTTP_PERM_REDIRECT)}).contains(Boxing.boxInt(responseExecute.code()))) {
                     String strHeader$default = Response.header$default(responseExecute, HttpResponseHeader.Location, null, 2, null);
                     if (strHeader$default == null || StringsKt.isBlank(strHeader$default)) {
                         Log.e("EmbyRepository", "解析 Logo 重定向失败: 缺少 Location, url=" + imageUrl);
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("Logo 重定向缺少 Location")));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(new Exception("Logo 重定向缺少 Location"));
                     } else {
                         HttpUrl httpUrlResolve = responseExecute.request().url().resolve(strHeader$default);
                         if (httpUrlResolve != null && (url = httpUrlResolve.getUrl()) != null) {
@@ -79,12 +79,12 @@ public final class nf0 extends SuspendLambda implements Function2 {
                             str = "";
                         }
                         Log.d("EmbyRepository", "详情页 Logo 解析成功(重定向): itemId=" + str2 + ", tag=" + str + ", requestUrl=" + imageUrl + ", resolvedUrl=" + strHeader$default);
-                        objM8825constructorimpl = Result.m8825constructorimpl(strHeader$default);
+                        objM8825constructorimpl = strHeader$default;
                     }
                 } else {
                     Log.e("EmbyRepository", "解析 Logo 地址失败: HTTP " + responseExecute.code() + ", url=" + imageUrl);
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("解析 Logo 地址失败: HTTP " + responseExecute.code())));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(new Exception("解析 Logo 地址失败: HTTP " + responseExecute.code()));
                 }
                 CloseableKt.closeFinally(responseExecute, null);
             } catch (Throwable th) {
@@ -97,8 +97,8 @@ public final class nf0 extends SuspendLambda implements Function2 {
             }
         } catch (Exception e) {
             Log.e("EmbyRepository", "解析 Logo 地址异常", e);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("解析 Logo 地址异常: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("解析 Logo 地址异常: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

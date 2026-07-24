@@ -95,14 +95,14 @@ public final class ae0 extends SuspendLambda implements Function2 {
                         e = e;
                         str = str2;
                         Log.e(str, "获取首页媒体栏目失败", e);
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
                     }
                 } catch (Exception e2) {
                     e = e2;
                     Log.e(str, "获取首页媒体栏目失败", e);
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
                 }
             } else {
                 if (i2 != 1) {
@@ -119,16 +119,16 @@ public final class ae0 extends SuspendLambda implements Function2 {
             }
             Response response = (Response) items;
             if (!response.isSuccessful() || response.body() == null) {
-                Result.Companion companion3 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception("获取首页媒体栏目失败: " + response.message())));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception("获取首页媒体栏目失败: " + response.message()));
             } else {
                 Object objBody = response.body();
                 objBody.getClass();
                 QueryResult queryResult = (QueryResult) objBody;
                 List listB = uf0.b(uf0Var, queryResult, "首页媒体栏目");
                 Log.d(str2, "首页媒体栏目加载成功: parentId=" + this.i + ", collectionType=" + str4 + ", includeItemTypes=" + strC + ", hidePlayed=" + z + ", startIndex=" + i + ", 返回" + listB.size() + "项, 总数" + queryResult.getTotalRecordCount());
-                Result.Companion companion4 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(new od0(listB, queryResult.getTotalRecordCount()));
+                
+                objM8825constructorimpl = new od0(listB, queryResult.getTotalRecordCount());
             }
         } catch (Exception e3) {
             e = e3;

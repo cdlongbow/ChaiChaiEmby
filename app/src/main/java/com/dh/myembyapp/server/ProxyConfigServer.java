@@ -7,7 +7,6 @@ import defpackage.i02;
 import defpackage.kb0;
 import fi.iki.elonen.NanoHTTPD;
 import java.util.HashMap;
-import kotlin.Metadata;
 import kotlin.Result;
 import kotlin.ResultKt;
 import kotlin.Unit;
@@ -17,7 +16,6 @@ import kotlin.text.StringsKt;
 import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0002\u0018\u0000 \u00112\u00020\u0001:\u0001\u0011B+\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\b0\u0007¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0016J\b\u0010\u000f\u001a\u00020\fH\u0002J\u0010\u0010\u0010\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0002R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\b0\u0007X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0012"}, d2 = {"Lcom/dh/myembyapp/server/ProxyConfigServer;", "Lfi/iki/elonen/NanoHTTPD;", "port", "", "initialConfig", "Lcom/dh/myembyapp/data/ProxyConfig;", "onConfigReceived", "Lkotlin/Function1;", "", "<init>", "(ILcom/dh/myembyapp/data/ProxyConfig;Lkotlin/jvm/functions/Function1;)V", "serve", "Lfi/iki/elonen/NanoHTTPD$Response;", "session", "Lfi/iki/elonen/NanoHTTPD$IHTTPSession;", "serveHtml", "handleSave", "Companion", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
 final class ProxyConfigServer extends NanoHTTPD {
     private static final String TAG = "ProxyCfgServerInner";
     private final ProxyConfig initialConfig;
@@ -51,13 +49,13 @@ final class ProxyConfigServer extends NanoHTTPD {
                 return responseNewFixedLengthResponse;
             }
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(new JSONObject(str));
+                
+                objM8825constructorimpl = new JSONObject(str);
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
-            if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+            if (false) {
                 objM8825constructorimpl = null;
             }
             JSONObject jSONObject = (JSONObject) objM8825constructorimpl;

@@ -967,14 +967,14 @@ public abstract class lx1 {
                     objRememberedValue = null;
                     if (str != null) {
                         try {
-                            Result.Companion companion = Result.INSTANCE;
-                            objM8825constructorimpl = Result.m8825constructorimpl(Boolean.valueOf(new File(str).isFile()));
+                            
+                            objM8825constructorimpl = Boolean.valueOf(new File(str.isFile()));
                         } catch (Throwable th) {
-                            Result.Companion companion2 = Result.INSTANCE;
-                            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                            
+                            objM8825constructorimpl = ResultKt.createFailure(th);
                         }
                         bool = Boolean.FALSE;
-                        if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                        if (false) {
                             objM8825constructorimpl = bool;
                         }
                         if (((Boolean) objM8825constructorimpl).booleanValue()) {
@@ -1047,10 +1047,10 @@ public abstract class lx1 {
             if (z2) {
                 objRememberedValue = null;
                 if (str != null) {
-                    Result.Companion companion3 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(Boolean.valueOf(new File(str).isFile()));
+                    
+                    objM8825constructorimpl = Boolean.valueOf(new File(str.isFile()));
                     bool = Boolean.FALSE;
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                    if (false) {
                         objM8825constructorimpl = bool;
                     }
                     if (((Boolean) objM8825constructorimpl).booleanValue()) {
@@ -1066,10 +1066,10 @@ public abstract class lx1 {
             } else {
                 objRememberedValue = null;
                 if (str != null) {
-                    Result.Companion companion4 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(Boolean.valueOf(new File(str).isFile()));
+                    
+                    objM8825constructorimpl = Boolean.valueOf(new File(str.isFile()));
                     bool = Boolean.FALSE;
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                    if (false) {
                         objM8825constructorimpl = bool;
                     }
                     if (((Boolean) objM8825constructorimpl).booleanValue()) {

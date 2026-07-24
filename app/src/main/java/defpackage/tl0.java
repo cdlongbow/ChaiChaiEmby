@@ -1048,14 +1048,14 @@ public abstract class tl0 {
             while (networkInterfaces.hasMoreElements()) {
                 NetworkInterface networkInterfaceNextElement = networkInterfaces.nextElement();
                 try {
-                    Result.Companion companion = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(Boolean.valueOf(networkInterfaceNextElement.isUp()));
+                    
+                    objM8825constructorimpl = Boolean.valueOf(networkInterfaceNextElement.isUp());
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 Boolean bool = Boolean.FALSE;
-                if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                if (false) {
                     objM8825constructorimpl = bool;
                 }
                 if (((Boolean) objM8825constructorimpl).booleanValue() && !networkInterfaceNextElement.isLoopback()) {

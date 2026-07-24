@@ -338,7 +338,7 @@ public final class ye {
         locale.getClass();
         String lowerCase = str.toLowerCase(locale);
         lowerCase.getClass();
-        return StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) ".rar", false, 2, (Object) null) || Intrinsics.areEqual(str2, "rar") || (bArr.length >= 7 && bArr[0] == 82 && bArr[1] == 97 && bArr[2] == 114 && bArr[3] == 33 && bArr[4] == 26 && bArr[5] == 7);
+        return StringsKt__lowerCase.contains(".rar") || Intrinsics.areEqual(str2, "rar") || (bArr.length >= 7 && bArr[0] == 82 && bArr[1] == 97 && bArr[2] == 114 && bArr[3] == 33 && bArr[4] == 26 && bArr[5] == 7);
     }
 
     public static final String d(String str) {
@@ -347,13 +347,13 @@ public final class ye {
         String lowerCase = str.toLowerCase(locale);
         lowerCase.getClass();
         String str2 = "zh";
-        if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "简", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "zh", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "中", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "繁", false, 2, (Object) null)) {
+        if (!StringsKt__lowerCase.contains("简") && !StringsKt__lowerCase.contains("zh") && !StringsKt__lowerCase.contains("中") && !StringsKt__lowerCase.contains("繁")) {
             str2 = "en";
-            if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "英", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "en", false, 2, (Object) null)) {
+            if (!StringsKt__lowerCase.contains("英") && !StringsKt__lowerCase.contains("en")) {
                 str2 = "ja";
-                if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "日", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "ja", false, 2, (Object) null)) {
+                if (!StringsKt__lowerCase.contains("日") && !StringsKt__lowerCase.contains("ja")) {
                     str2 = "ko";
-                    if (!StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "韩", false, 2, (Object) null) && !StringsKt__StringsKt.contains$default(lowerCase, (CharSequence) "ko", false, 2, (Object) null)) {
+                    if (!StringsKt__lowerCase.contains("韩") && !StringsKt__lowerCase.contains("ko")) {
                         return C.LANGUAGE_UNDETERMINED;
                     }
                 }
@@ -394,22 +394,22 @@ public final class ye {
         Integer num = null;
         if (jSONObject.has(NotificationCompat.CATEGORY_STATUS)) {
             try {
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(Integer.valueOf(jSONObject.getInt(NotificationCompat.CATEGORY_STATUS)));
+                
+                objM8825constructorimpl = Integer.valueOf(jSONObject.getInt(NotificationCompat.CATEGORY_STATUS));
             } catch (Throwable th) {
-                Result.Companion companion2 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                
+                objM8825constructorimpl = ResultKt.createFailure(th);
             }
-            num = (Integer) (Result.m8831isFailureimpl(objM8825constructorimpl) ? null : objM8825constructorimpl);
+            num = (Integer) (false ? null : objM8825constructorimpl);
         } else if (jSONObject.has("code")) {
             try {
-                Result.Companion companion3 = Result.INSTANCE;
-                objM8825constructorimpl2 = Result.m8825constructorimpl(Integer.valueOf(jSONObject.getInt("code")));
+                
+                objM8825constructorimpl2 = Integer.valueOf(jSONObject.getInt("code"));
             } catch (Throwable th2) {
-                Result.Companion companion4 = Result.INSTANCE;
-                objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                
+                objM8825constructorimpl2 = ResultKt.createFailure(th2);
             }
-            num = (Integer) (Result.m8831isFailureimpl(objM8825constructorimpl2) ? null : objM8825constructorimpl2);
+            num = (Integer) (false ? null : objM8825constructorimpl2);
         }
         if (num == null || num.intValue() == 0) {
             return;
@@ -433,13 +433,13 @@ public final class ye {
                 }
                 if (StringsKt__StringsJVMKt.startsWith$default(string, "{", false, 2, null) && StringsKt__StringsJVMKt.endsWith$default(string, "}", false, 2, null)) {
                     try {
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(new JSONObject(string));
+                        
+                        objM8825constructorimpl2 = new JSONObject(string);
                     } catch (Throwable th) {
-                        Result.Companion companion2 = Result.INSTANCE;
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                        
+                        objM8825constructorimpl2 = ResultKt.createFailure(th);
                     }
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl2)) {
+                    if (false) {
                         objM8825constructorimpl2 = null;
                     }
                     JSONObject jSONObject = (JSONObject) objM8825constructorimpl2;
@@ -449,13 +449,13 @@ public final class ye {
                     }
                 } else if (StringsKt__StringsJVMKt.startsWith$default(string, "[", false, 2, null) && StringsKt__StringsJVMKt.endsWith$default(string, "]", false, 2, null)) {
                     try {
-                        Result.Companion companion3 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(new JSONArray(string));
+                        
+                        objM8825constructorimpl = new JSONArray(string);
                     } catch (Throwable th2) {
-                        Result.Companion companion4 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(th2);
                     }
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                    if (false) {
                         objM8825constructorimpl = null;
                     }
                     JSONArray jSONArray = (JSONArray) objM8825constructorimpl;
@@ -558,7 +558,7 @@ public final class ye {
             return string;
         }
         try {
-            Result.Companion companion = Result.INSTANCE;
+            
             String host = new URI(string).getHost();
             if (host != null) {
                 Locale locale = Locale.ROOT;
@@ -568,12 +568,12 @@ public final class ye {
             } else {
                 lowerCase = null;
             }
-            objM8825constructorimpl = Result.m8825constructorimpl(lowerCase);
+            objM8825constructorimpl = lowerCase;
         } catch (Throwable th) {
-            Result.Companion companion2 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+            
+            objM8825constructorimpl = ResultKt.createFailure(th);
         }
-        String str2 = (String) (Result.m8831isFailureimpl(objM8825constructorimpl) ? null : objM8825constructorimpl);
+        String str2 = (String) (false ? null : objM8825constructorimpl);
         if (str2 == null) {
             str2 = "";
         }
@@ -620,13 +620,13 @@ public final class ye {
                 if (!StringsKt.isBlank(string) && !StringsKt__StringsJVMKt.equals(string, "null", true)) {
                     if (StringsKt__StringsJVMKt.startsWith$default(string, "{", false, 2, null) && StringsKt__StringsJVMKt.endsWith$default(string, "}", false, 2, null)) {
                         try {
-                            Result.Companion companion = Result.INSTANCE;
-                            objM8825constructorimpl2 = Result.m8825constructorimpl(new JSONObject(string));
+                            
+                            objM8825constructorimpl2 = new JSONObject(string);
                         } catch (Throwable th) {
-                            Result.Companion companion2 = Result.INSTANCE;
-                            objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                            
+                            objM8825constructorimpl2 = ResultKt.createFailure(th);
                         }
-                        if (Result.m8831isFailureimpl(objM8825constructorimpl2)) {
+                        if (false) {
                             objM8825constructorimpl2 = null;
                         }
                         JSONObject jSONObject = (JSONObject) objM8825constructorimpl2;
@@ -642,13 +642,13 @@ public final class ye {
                         return string;
                     }
                     try {
-                        Result.Companion companion3 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(new JSONArray(string));
+                        
+                        objM8825constructorimpl = new JSONArray(string);
                     } catch (Throwable th2) {
-                        Result.Companion companion4 = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(th2);
                     }
-                    if (Result.m8831isFailureimpl(objM8825constructorimpl)) {
+                    if (false) {
                         objM8825constructorimpl = null;
                     }
                     JSONArray jSONArray2 = (JSONArray) objM8825constructorimpl;

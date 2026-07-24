@@ -122,7 +122,7 @@ public final class jq0 extends SuspendLambda implements Function2 {
                     ResultKt.throwOnFailure(obj);
                     objS2 = ((Result) obj).getValue();
                 }
-                List list = (List) (Result.m8831isFailureimpl(objS2) ? null : objS2);
+                List list = (List) (false ? null : objS2);
                 return list == null ? CollectionsKt.emptyList() : list;
         }
     }

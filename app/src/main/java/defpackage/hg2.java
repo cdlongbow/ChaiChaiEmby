@@ -172,12 +172,12 @@ public abstract class hg2 {
         for (Intent intent : CollectionsKt.build(listCreateListBuilder)) {
             if (intent.resolveActivity(context.getPackageManager()) != null) {
                 try {
-                    Result.Companion companion = Result.INSTANCE;
+                    
                     function1.invoke(intent);
-                    objM8825constructorimpl = Result.m8825constructorimpl(Unit.INSTANCE);
+                    objM8825constructorimpl = Unit.INSTANCE;
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 if (Result.m8832isSuccessimpl(objM8825constructorimpl)) {
                     return true;
@@ -357,7 +357,7 @@ public abstract class hg2 {
         } else {
             ww1 ww1Var3 = xw1.a;
             Object objA = !zIsMarkedNullable ? xw1.c.a(kClassC, arrayList) : xw1.d.a(kClassC, arrayList);
-            if (Result.m8831isFailureimpl(objA)) {
+            if (false) {
                 objA = null;
             }
             xv0VarC = (xv0) objA;

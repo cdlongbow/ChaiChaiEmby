@@ -6,12 +6,10 @@ import com.dh.myembyapp.data.model.MediaItem;
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\t\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0087\b\u0018\u00002\u00020\u0001R\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u001a\u0010\b\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u001a\u0010\f\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\f\u0010\t\u001a\u0004\b\r\u0010\u000bR\u001a\u0010\u000f\u001a\u00020\u000e8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012R\u001a\u0010\u0014\u001a\u00020\u00138\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R \u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00190\u00188\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u001dR \u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u001e0\u00188\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u001f\u0010\u001b\u001a\u0004\b \u0010\u001dR \u0010\"\u001a\b\u0012\u0004\u0012\u00020!0\u00188\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\"\u0010\u001b\u001a\u0004\b#\u0010\u001d¨\u0006$"}, d2 = {"Ldq0;", "", "", "schemaVersion", "I", "f", "()I", "", "serverId", "Ljava/lang/String;", "g", "()Ljava/lang/String;", "userId", CmcdData.STREAMING_FORMAT_HLS, "", "hidePlayed", "Z", CmcdData.OBJECT_TYPE_AUDIO_ONLY, "()Z", "", "savedAtMillis", "J", "e", "()J", "", "Lcom/dh/myembyapp/data/model/Library;", "libraries", "Ljava/util/List;", "b", "()Ljava/util/List;", "Lcom/dh/myembyapp/data/model/MediaItem;", "resumeItems", "d", "Lrx0;", "libraryContents", "c", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class dq0 {
+public final  class dq0 {
 
     @SerializedName("hidePlayed")
     private final boolean hidePlayed;

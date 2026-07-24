@@ -131,16 +131,16 @@ public final class ge0 extends SuspendLambda implements Function2 {
                         e = e;
                         str13 = str6;
                         Log.e(str13, "分页加载失败", e);
-                        Result.Companion companion = Result.INSTANCE;
-                        objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+                        
+                        objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
                         return Result.m8824boximpl(objM8825constructorimpl);
                     }
                 } catch (Exception e2) {
                     e = e2;
                     str13 = str19;
                     Log.e(str13, "分页加载失败", e);
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
                     return Result.m8824boximpl(objM8825constructorimpl);
                 }
             } else {
@@ -173,26 +173,26 @@ public final class ge0 extends SuspendLambda implements Function2 {
                     ResponseBody responseBodyErrorBody = response.errorBody();
                     String strString = responseBodyErrorBody != null ? responseBodyErrorBody.string() : null;
                     Log.w(str25, "分页加载失败: code=" + response.code() + ", message=" + response.message() + ", parentId=" + str8 + str12 + i + str11 + i2 + str10 + z + str4 + str3 + str + str5 + str9 + str15 + str7 + str2 + ", errorBody=" + (strString != null ? StringsKt.take(strString, 1000) : null));
-                    Result.Companion companion3 = Result.INSTANCE;
+                    
                     int iCode = response.code();
                     String strMessage = response.message();
                     StringBuilder sb = new StringBuilder("获取媒体项失败: ");
                     sb.append(strMessage);
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new nd0(iCode, sb.toString())));
+                    objM8825constructorimpl = ResultKt.createFailure(new nd0(iCode, sb.toString()));
                 } else {
                     Object objBody = response.body();
                     objBody.getClass();
                     QueryResult queryResult = (QueryResult) objBody;
                     List listB = uf0.b(uf0Var, queryResult, "分页加载");
                     Log.d(str6, "分页加载成功: 返回" + listB.size() + "项, 总数" + queryResult.getTotalRecordCount());
-                    Result.Companion companion4 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(new od0(listB, queryResult.getTotalRecordCount()));
+                    
+                    objM8825constructorimpl = new od0(listB, queryResult.getTotalRecordCount());
                 }
             } catch (Exception e3) {
                 e = e3;
                 Log.e(str13, "分页加载失败", e);
-                Result.Companion companion5 = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+                
+                objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
             }
         } catch (Exception e4) {
             e = e4;

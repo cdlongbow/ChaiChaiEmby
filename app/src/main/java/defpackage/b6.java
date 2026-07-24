@@ -104,12 +104,12 @@ public final class b6 extends SuspendLambda implements Function2 {
                 ResultKt.throwOnFailure(obj);
                 FocusRequester focusRequester = (FocusRequester) obj4;
                 try {
-                    Result.Companion companion = Result.INSTANCE;
-                    Result.m8825constructorimpl(Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null)));
+                    
+                    Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null));
                     break;
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    ResultKt.createFailure(th);
                 }
                 float f2 = f7.a;
                 mutableState.setValue(Boolean.FALSE);

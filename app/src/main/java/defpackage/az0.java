@@ -268,7 +268,7 @@ public final class az0 extends SuspendLambda implements Function2 {
                 }
                 M8832isSuccessimpl = Result.m8832isSuccessimpl(objM);
                 if (M8832isSuccessimpl != 0) {
-                    if (!Result.m8831isFailureimpl(objM)) {
+                    if (!false) {
                         obj3 = objM;
                     }
                     obj3.getClass();

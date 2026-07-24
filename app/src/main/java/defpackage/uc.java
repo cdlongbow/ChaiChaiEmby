@@ -238,7 +238,7 @@ public final class uc extends SuspendLambda implements Function2 {
                     return Unit.INSTANCE;
                 }
                 if (Result.m8832isSuccessimpl(objF2)) {
-                    String str9 = (String) (Result.m8831isFailureimpl(objF2) ? null : objF2);
+                    String str9 = (String) (false ? null : objF2);
                     if (str9 == null || StringsKt.isBlank(str9)) {
                         Log.d("DetailViewModel", "详情页 Logo 解析结果为空: itemId=" + mediaItem.getId());
                         mutableStateFlow.setValue(new y90(mediaItem.getId()));
@@ -317,7 +317,7 @@ public final class uc extends SuspendLambda implements Function2 {
                     return Unit.INSTANCE;
                 }
                 if (Result.m8832isSuccessimpl(objF3)) {
-                    if (Result.m8831isFailureimpl(objF3)) {
+                    if (false) {
                         objF3 = null;
                     }
                     String str13 = (String) objF3;
@@ -361,7 +361,7 @@ public final class uc extends SuspendLambda implements Function2 {
                         value2 = ((Result) obj).getValue();
                         str2 = " message=";
                     }
-                    if (Result.m8831isFailureimpl(value2)) {
+                    if (false) {
                         long j2 = j / Renderer.DEFAULT_DURATION_TO_PROGRESS_US;
                         Throwable thM8828exceptionOrNullimpl4 = Result.m8828exceptionOrNullimpl(value2);
                         Log.w("TraktSync", "event=emby_sync result=failure itemId=" + str15 + " positionMs=" + j2 + str2 + (thM8828exceptionOrNullimpl4 != null ? thM8828exceptionOrNullimpl4.getMessage() : null));

@@ -176,13 +176,13 @@ public final /* synthetic */ class j1 implements Function1 {
                 intentD.setClassName(str8, str7);
                 intentD.addFlags(268435456);
                 try {
-                    Result.Companion companion = Result.INSTANCE;
+                    
                     context.startActivity(intentD);
-                    objM8825constructorimpl = Result.m8825constructorimpl(Unit.INSTANCE);
+                    objM8825constructorimpl = Unit.INSTANCE;
                     break;
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 Throwable thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(objM8825constructorimpl);
                 if (thM8828exceptionOrNullimpl != null) {

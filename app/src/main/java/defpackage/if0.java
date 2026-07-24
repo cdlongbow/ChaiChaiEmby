@@ -80,20 +80,20 @@ public final class if0 extends SuspendLambda implements Function2 {
             Response response = (Response) objReportPlaybackStart;
             if (response.isSuccessful()) {
                 Log.d("EmbyPlaybackReport", "api=Start success ItemId=" + str);
-                Result.Companion companion = Result.INSTANCE;
-                objM8825constructorimpl = Result.m8825constructorimpl(Unit.INSTANCE);
+                
+                objM8825constructorimpl = Unit.INSTANCE;
             } else {
                 Log.e("EmbyPlaybackReport", "api=Start failure ItemId=" + str + ", code=" + response.code() + ", message=" + response.message());
-                Result.Companion companion2 = Result.INSTANCE;
+                
                 String strMessage = response.message();
                 StringBuilder sb = new StringBuilder("上报播放开始失败: ");
                 sb.append(strMessage);
-                objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(sb.toString())));
+                objM8825constructorimpl = ResultKt.createFailure(new Exception(sb.toString()));
             }
         } catch (Exception e) {
             kb0.G("api=Start exception ItemId=", str, "EmbyPlaybackReport", e);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage()))));
+            
+            objM8825constructorimpl = ResultKt.createFailure(new Exception(kb0.x("网络错误: ", e.getMessage())));
         }
         return Result.m8824boximpl(objM8825constructorimpl);
     }

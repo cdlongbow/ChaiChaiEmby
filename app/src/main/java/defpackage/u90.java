@@ -5170,18 +5170,18 @@ public abstract class u90 {
             } else {
                 DateTimeFormatter dateTimeFormatterOfPattern = DateTimeFormatter.ofPattern("yyyy/M/d HH:mm");
                 try {
-                    Result.Companion companion = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(Instant.parse(dateCreated).atZone(ZoneId.systemDefault()).format(dateTimeFormatterOfPattern));
+                    
+                    objM8825constructorimpl = Instant.parse(dateCreated.atZone(ZoneId.systemDefault()).format(dateTimeFormatterOfPattern));
                 } catch (Throwable th) {
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
                 if (Result.m8828exceptionOrNullimpl(objM8825constructorimpl) != null) {
                     try {
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(LocalDateTime.parse(dateCreated).format(dateTimeFormatterOfPattern));
+                        objM8825constructorimpl2 = LocalDateTime.parse(dateCreated.format(dateTimeFormatterOfPattern));
                     } catch (Throwable th2) {
-                        Result.Companion companion3 = Result.INSTANCE;
-                        objM8825constructorimpl2 = Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                        
+                        objM8825constructorimpl2 = ResultKt.createFailure(th2);
                     }
                     Throwable thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(objM8825constructorimpl2);
                     Object obj = objM8825constructorimpl2;

@@ -1,13 +1,11 @@
 package defpackage;
 
 import com.google.gson.annotations.SerializedName;
-import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001R\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u001a\u0010\b\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u001a\u0010\r\u001a\u00020\f8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\r\u0010\u000e\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"Lt91;", "", "", "enabled", "Z", "e", "()Z", "", "assrtApiToken", "Ljava/lang/String;", "c", "()Ljava/lang/String;", "Lne;", "assrtApiProtocol", "Lne;", "b", "()Lne;", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class t91 {
+public final  class t91 {
 
     @SerializedName("assrtApiProtocol")
     private final ne assrtApiProtocol;

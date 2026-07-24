@@ -126,22 +126,22 @@ public final class h90 extends SuspendLambda implements Function2 {
                     if (((String) obj2) != null) {
                         FocusRequester focusRequester = (FocusRequester) obj3;
                         try {
-                            Result.Companion companion = Result.INSTANCE;
-                            Result.m8825constructorimpl(Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null)));
+                            
+                            Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester, 0, 1, null));
                         } catch (Throwable th) {
-                            Result.Companion companion2 = Result.INSTANCE;
-                            Result.m8825constructorimpl(ResultKt.createFailure(th));
+                            
+                            ResultKt.createFailure(th);
                         }
                     }
                     break;
                 } else {
                     FocusRequester focusRequester2 = (FocusRequester) this.h;
                     try {
-                        Result.Companion companion3 = Result.INSTANCE;
-                        Result.m8825constructorimpl(Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester2, 0, 1, null)));
+                        
+                        Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester2, 0, 1, null));
                     } catch (Throwable th2) {
-                        Result.Companion companion4 = Result.INSTANCE;
-                        Result.m8825constructorimpl(ResultKt.createFailure(th2));
+                        
+                        ResultKt.createFailure(th2);
                     }
                     break;
                 }
@@ -198,7 +198,7 @@ public final class h90 extends SuspendLambda implements Function2 {
                     va0Var.f();
                     return Unit.INSTANCE;
                     if (Result.m8832isSuccessimpl(objL)) {
-                        Object obj4 = Result.m8831isFailureimpl(objL) ? null : objL;
+                        Object obj4 = false ? null : objL;
                         obj4.getClass();
                         mediaItemT = va0.t((MediaItem) obj4);
                         va0Var.c = Intrinsics.areEqual(mediaItemT.getType(), "Series") ? mediaItemT.getId() : null;
@@ -287,12 +287,12 @@ public final class h90 extends SuspendLambda implements Function2 {
                 }
                 FocusRequester focusRequester3 = (FocusRequester) this.h;
                 try {
-                    Result.Companion companion5 = Result.INSTANCE;
-                    Result.m8825constructorimpl(Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester3, 0, 1, null)));
+                    
+                    Boxing.boxBoolean(FocusRequester.m4818requestFocus3ESFkO8$default(focusRequester3, 0, 1, null));
                     break;
                 } catch (Throwable th3) {
-                    Result.Companion companion6 = Result.INSTANCE;
-                    Result.m8825constructorimpl(ResultKt.createFailure(th3));
+                    
+                    ResultKt.createFailure(th3);
                 }
                 mutableState.setValue(Boolean.FALSE);
                 function0.invoke();

@@ -3,13 +3,11 @@ package defpackage;
 import android.os.Build;
 import androidx.media3.exoplayer.upstream.CmcdData;
 import com.google.gson.annotations.SerializedName;
-import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\t\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001R\u001a\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0003\u0010\u0004\u001a\u0004\b\u0005\u0010\u0006R\u001a\u0010\b\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u001a\u0010\f\u001a\u00020\u00078\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\f\u0010\t\u001a\u0004\b\r\u0010\u000bR\u001a\u0010\u000f\u001a\u00020\u000e8\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012R\u001c\u0010\u0014\u001a\u0004\u0018\u00010\u00138\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u00188\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u001c¨\u0006\u001d"}, d2 = {"Lrf2;", "", "", "schemaVersion", "I", "getSchemaVersion", "()I", "", "appVersionName", "Ljava/lang/String;", "b", "()Ljava/lang/String;", "deviceModel", "c", "", "exportedAtMs", "J", "d", "()J", "Lwe2;", "serverState", "Lwe2;", "e", "()Lwe2;", "Lse2;", "appSettingsState", "Lse2;", CmcdData.OBJECT_TYPE_AUDIO_ONLY, "()Lse2;", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-public final /* data */ class rf2 {
+public final  class rf2 {
 
     @SerializedName("appSettingsState")
     private final se2 appSettingsState;

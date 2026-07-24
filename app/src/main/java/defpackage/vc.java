@@ -81,7 +81,7 @@ public final class vc {
             if (strConcat == null) {
                 strConcat = "";
             }
-            if (!StringsKt__StringsKt.contains$default(strConcat, (CharSequence) "下载已取消，可再次点击“下载更新”重试", false, 2, (Object) null)) {
+            if (!StringsKt__strConcat.contains("下载已取消，可再次点击“下载更新”重试")) {
                 strConcat = StringsKt.isBlank(strConcat) ? "下载已取消，可再次点击“下载更新”重试" : strConcat.concat("\n\n下载已取消，可再次点击“下载更新”重试");
             }
             i(strConcat);

@@ -345,7 +345,7 @@ public final class to1 extends ViewModel {
                 ResultKt.throwOnFailure(obj);
                 objI = ((Result) obj).getValue();
             }
-            if (!Result.m8831isFailureimpl(objI)) {
+            if (!false) {
                 obj2 = objI;
             }
             List listEmptyList = (List) obj2;
@@ -453,7 +453,7 @@ public final class to1 extends ViewModel {
             transcodeQualityOption2 = transcodeQualityOption3;
             str4 = str5;
         }
-        TraktCloudPlaybackProgress traktCloudPlaybackProgress = (TraktCloudPlaybackProgress) (Result.m8831isFailureimpl(objY) ? null : objY);
+        TraktCloudPlaybackProgress traktCloudPlaybackProgress = (TraktCloudPlaybackProgress) (false ? null : objY);
         if (traktCloudPlaybackProgress == null) {
             return Boxing.boxBoolean(false);
         }

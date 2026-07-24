@@ -424,7 +424,7 @@ public final class qq0 extends SuspendLambda implements Function2 {
                     return Unit.INSTANCE;
                 }
                 if (Result.m8832isSuccessimpl(value2)) {
-                    if (Result.m8831isFailureimpl(value2)) {
+                    if (false) {
                         value2 = list;
                     }
                     od0 od0Var = (od0) value2;

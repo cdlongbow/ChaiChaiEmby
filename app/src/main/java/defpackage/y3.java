@@ -128,7 +128,7 @@ public final class y3 extends SuspendLambda implements Function2 {
                 if (response.isSuccessful() || response.body() == null) {
                     throw new Exception("获取继续观看失败: " + response.code() + " " + response.message());
                 }
-                objM8825constructorimpl = Result.m8825constructorimpl(CollectionsKt.take(b4.b(b4Var, listEmptyList2), i));
+                objM8825constructorimpl = CollectionsKt.take(b4.b(b4Var, listEmptyList2, i));
                 Throwable thM8828exceptionOrNullimpl = Result.m8828exceptionOrNullimpl(objM8825constructorimpl);
                 if (thM8828exceptionOrNullimpl != null) {
                     Log.e("AggregateHubRepo", str + serverConfig.getAlias() + "] 获取继续观看失败", thM8828exceptionOrNullimpl);
@@ -138,7 +138,7 @@ public final class y3 extends SuspendLambda implements Function2 {
             ResultKt.throwOnFailure(obj);
             b4 b4Var4 = this.m;
             int i7 = this.o;
-            Result.Companion companion = Result.INSTANCE;
+            
             EmbyApiService embyApiServiceA = b4.a(b4Var4, serverConfig4);
             String strE = b4.e(b4Var4, serverConfig4);
             try {
@@ -168,8 +168,8 @@ public final class y3 extends SuspendLambda implements Function2 {
                     return coroutine_suspended;
                 } catch (Throwable th) {
                     th = th;
-                    Result.Companion companion2 = Result.INSTANCE;
-                    objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(th));
+                    
+                    objM8825constructorimpl = ResultKt.createFailure(th);
                 }
             } catch (Throwable th2) {
                 th = th2;

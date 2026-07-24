@@ -53,8 +53,8 @@ public final class mc extends SuspendLambda implements Function2 {
                 string2 = "";
             }
             if (StringsKt.isBlank(string2)) {
-                Result.Companion companion = Result.INSTANCE;
-                return Result.m8824boximpl(Result.m8825constructorimpl(ResultKt.createFailure(new IOException("GitHub 返回数据异常：tag_name 为空"))));
+                
+                return Result.m8824boximpl(ResultKt.createFailure(new IOException("GitHub 返回数据异常：tag_name 为空")));
             }
             String str5 = gcVarB.b;
             String string3 = str5 != null ? StringsKt.trim((CharSequence) str5).toString() : null;
@@ -77,7 +77,7 @@ public final class mc extends SuspendLambda implements Function2 {
             String str7 = string4;
             boolean zA = pc.a(str3, string2);
             ic icVarD = pc.d(gcVarB.e);
-            Result.Companion companion2 = Result.INSTANCE;
+            
             String str8 = gcVarB.d;
             String string5 = str8 != null ? StringsKt.trim((CharSequence) str8).toString() : null;
             String str9 = string5 == null ? "" : string5;
@@ -85,12 +85,12 @@ public final class mc extends SuspendLambda implements Function2 {
             if (icVarD != null && (str = icVarD.a) != null) {
                 string = StringsKt.trim((CharSequence) str).toString();
             }
-            objM8825constructorimpl = Result.m8825constructorimpl(new kc(zA, strI2, strI, str7, str9, string6, string, (icVarD == null || (l = icVarD.b) == null) ? 0L : l.longValue()));
+            objM8825constructorimpl = new kc(zA, strI2, strI, str7, str9, string6, string, (icVarD == null || (l = icVarD.b == null) ? 0L : l.longValue()));
             return Result.m8824boximpl(objM8825constructorimpl);
         } catch (Exception e) {
             Log.e("AppUpdateRepository", "检查更新失败", e);
-            Result.Companion companion3 = Result.INSTANCE;
-            objM8825constructorimpl = Result.m8825constructorimpl(ResultKt.createFailure(e));
+            
+            objM8825constructorimpl = ResultKt.createFailure(e);
         }
     }
 }

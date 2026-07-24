@@ -10,14 +10,12 @@ import defpackage.i02;
 import defpackage.kb0;
 import defpackage.o20;
 import defpackage.rd1;
-import kotlin.Metadata;
 import kotlin.ResultKt;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.intrinsics.IntrinsicsKt;
 import kotlin.coroutines.jvm.internal.Boxing;
 import kotlin.coroutines.jvm.internal.ContinuationImpl;
-import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -26,7 +24,6 @@ import kotlinx.coroutines.flow.Flow;
 import kotlinx.coroutines.flow.FlowCollector;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0005\b\u0007\u0018\u0000 \u00162\u00020\u0001:\u0002\u0016\u0017B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\u0016\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0086@¢\u0006\u0002\u0010\u000fJ\u0016\u0010\u0010\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0086@¢\u0006\u0002\u0010\u000fJ\u0016\u0010\u0011\u001a\u00020\f2\u0006\u0010\u0012\u001a\u00020\u0013H\u0086@¢\u0006\u0002\u0010\u0014J\u0016\u0010\u0015\u001a\u00020\f2\u0006\u0010\u0012\u001a\u00020\u0013H\u0086@¢\u0006\u0002\u0010\u0014R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u0017\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\u0018"}, d2 = {"Lcom/dh/myembyapp/data/DecoderSettings;", "", "context", "Landroid/content/Context;", "<init>", "(Landroid/content/Context;)V", "decoderConfigFlow", "Lkotlinx/coroutines/flow/Flow;", "Lcom/dh/myembyapp/data/DecoderSettings$DecoderConfig;", "getDecoderConfigFlow", "()Lkotlinx/coroutines/flow/Flow;", "saveDecoderMode", "", "mode", "", "(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "saveAudioDecoderMode", "saveAudioPassthroughPriorityEnabled", "enabled", "", "(ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;", "saveDv7CompatibilityEnabled", "Companion", "DecoderConfig", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
 public final class DecoderSettings {
     public static final String AUDIO_DECODER_AUTO = "auto";
     public static final String AUDIO_DECODER_FORCE_FFMPEG = "force_ffmpeg";
@@ -35,16 +32,14 @@ public final class DecoderSettings {
     public static final String DECODER_MODE_SOFTWARE = "software";
     private final Context context;
     private final Flow<DecoderConfig> decoderConfigFlow;
-    public static final int $stable = 8;
+    
     private static final Preferences.Key<String> DECODER_MODE_KEY = PreferencesKeys.stringKey("decoder_mode");
     private static final Preferences.Key<String> AUDIO_DECODER_MODE_KEY = PreferencesKeys.stringKey("audio_decoder_mode");
     private static final Preferences.Key<Boolean> AUDIO_PASSTHROUGH_PRIORITY_ENABLED_KEY = PreferencesKeys.booleanKey("audio_passthrough_priority_enabled");
     private static final Preferences.Key<Boolean> DV7_COMPATIBILITY_ENABLED_KEY = PreferencesKeys.booleanKey("dv7_compatibility_enabled");
 
     /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$saveAudioDecoderMode$2, reason: invalid class name */
-    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "preferences", "Landroidx/datastore/preferences/core/MutablePreferences;"}, k = 3, mv = {2, 3, 0}, xi = 48)
-    @DebugMetadata(c = "com.dh.myembyapp.data.DecoderSettings$saveAudioDecoderMode$2", f = "DecoderSettings.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, nl = {}, s = {}, v = 2)
-    public static final class AnonymousClass2 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
+            public static final class AnonymousClass2 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
         final /* synthetic */ String $mode;
         /* synthetic */ Object L$0;
         int label;
@@ -82,9 +77,7 @@ public final class DecoderSettings {
     }
 
     /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$saveAudioPassthroughPriorityEnabled$2, reason: invalid class name and case insensitive filesystem */
-    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "preferences", "Landroidx/datastore/preferences/core/MutablePreferences;"}, k = 3, mv = {2, 3, 0}, xi = 48)
-    @DebugMetadata(c = "com.dh.myembyapp.data.DecoderSettings$saveAudioPassthroughPriorityEnabled$2", f = "DecoderSettings.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, nl = {}, s = {}, v = 2)
-    public static final class C03652 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
+            public static final class C03652 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
         final /* synthetic */ boolean $enabled;
         /* synthetic */ Object L$0;
         int label;
@@ -122,9 +115,7 @@ public final class DecoderSettings {
     }
 
     /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$saveDecoderMode$2, reason: invalid class name and case insensitive filesystem */
-    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "preferences", "Landroidx/datastore/preferences/core/MutablePreferences;"}, k = 3, mv = {2, 3, 0}, xi = 48)
-    @DebugMetadata(c = "com.dh.myembyapp.data.DecoderSettings$saveDecoderMode$2", f = "DecoderSettings.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, nl = {}, s = {}, v = 2)
-    public static final class C03662 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
+            public static final class C03662 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
         final /* synthetic */ String $mode;
         /* synthetic */ Object L$0;
         int label;
@@ -162,9 +153,7 @@ public final class DecoderSettings {
     }
 
     /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$saveDv7CompatibilityEnabled$2, reason: invalid class name and case insensitive filesystem */
-    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "preferences", "Landroidx/datastore/preferences/core/MutablePreferences;"}, k = 3, mv = {2, 3, 0}, xi = 48)
-    @DebugMetadata(c = "com.dh.myembyapp.data.DecoderSettings$saveDv7CompatibilityEnabled$2", f = "DecoderSettings.kt", i = {}, l = {}, m = "invokeSuspend", n = {}, nl = {}, s = {}, v = 2)
-    public static final class C03672 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
+            public static final class C03672 extends SuspendLambda implements Function2<MutablePreferences, Continuation<? super Unit>, Object> {
         final /* synthetic */ boolean $enabled;
         /* synthetic */ Object L$0;
         int label;
@@ -208,14 +197,11 @@ public final class DecoderSettings {
         this.decoderConfigFlow = new Flow<DecoderConfig>() { // from class: com.dh.myembyapp.data.DecoderSettings$special$$inlined$map$1
 
             /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$special$$inlined$map$1$2, reason: invalid class name */
-            @Metadata(k = 3, mv = {2, 3, 0}, xi = 48)
-            public static final class AnonymousClass2<T> implements FlowCollector {
+                        public static final class AnonymousClass2<T> implements FlowCollector {
                 final /* synthetic */ FlowCollector $this_unsafeFlow;
 
                 /* JADX INFO: renamed from: com.dh.myembyapp.data.DecoderSettings$special$$inlined$map$1$2$1, reason: invalid class name */
-                @Metadata(k = 3, mv = {2, 3, 0}, xi = 48)
-                @DebugMetadata(c = "com.dh.myembyapp.data.DecoderSettings$special$$inlined$map$1$2", f = "DecoderSettings.kt", i = {0, 0, 0, 0, 0}, l = {50}, m = "emit", n = {"value", "$completion", "value", "$this$map_u24lambda_u245", "$i$a$-unsafeTransform-FlowKt__TransformKt$map$1"}, nl = {Input.Keys.U}, s = {"L$0", "L$1", "L$2", "L$3", "I$0"}, v = 2)
-                public static final class AnonymousClass1 extends ContinuationImpl {
+                                                public static final class AnonymousClass1 extends ContinuationImpl {
                     int I$0;
                     Object L$0;
                     Object L$1;
@@ -324,9 +310,8 @@ public final class DecoderSettings {
         return objEdit == IntrinsicsKt.getCOROUTINE_SUSPENDED() ? objEdit : Unit.INSTANCE;
     }
 
-    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0011\n\u0002\u0010\b\n\u0002\b\u0002\b\u0087\b\u0018\u00002\u00020\u0001B/\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0006\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\t\u0010\u0010\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0011\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0012\u001a\u00020\u0006HÆ\u0003J\t\u0010\u0013\u001a\u00020\u0006HÆ\u0003J1\u0010\u0014\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00062\b\b\u0002\u0010\u0007\u001a\u00020\u0006HÆ\u0001J\u0014\u0010\u0015\u001a\u00020\u00062\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001HÖ\u0083\u0004J\n\u0010\u0017\u001a\u00020\u0018HÖ\u0081\u0004J\n\u0010\u0019\u001a\u00020\u0003HÖ\u0081\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u000bR\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0007\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u000e¨\u0006\u001a"}, d2 = {"Lcom/dh/myembyapp/data/DecoderSettings$DecoderConfig;", "", "mode", "", "audioMode", "audioPassthroughPriorityEnabled", "", "dv7CompatibilityEnabled", "<init>", "(Ljava/lang/String;Ljava/lang/String;ZZ)V", "getMode", "()Ljava/lang/String;", "getAudioMode", "getAudioPassthroughPriorityEnabled", "()Z", "getDv7CompatibilityEnabled", "component1", "component2", "component3", "component4", "copy", "equals", "other", "hashCode", "", "toString", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
-    public static final /* data */ class DecoderConfig {
-        public static final int $stable = 0;
+        public static final  class DecoderConfig {
+        
         private final String audioMode;
         private final boolean audioPassthroughPriorityEnabled;
         private final boolean dv7CompatibilityEnabled;

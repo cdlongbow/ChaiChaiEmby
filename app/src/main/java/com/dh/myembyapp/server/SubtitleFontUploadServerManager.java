@@ -8,13 +8,11 @@ import defpackage.tl0;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.Metadata;
 import kotlin.ResultKt;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.intrinsics.IntrinsicsKt;
-import kotlin.coroutines.jvm.internal.DebugMetadata;
 import kotlin.coroutines.jvm.internal.SuspendLambda;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
@@ -26,7 +24,6 @@ import kotlinx.coroutines.CoroutineScopeKt;
 import kotlinx.coroutines.Dispatchers;
 
 /* JADX INFO: loaded from: classes4.dex */
-@Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u0000 \u00182\u00020\u0001:\u0001\u0018B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\t\u0010\nJ3\u0010\u000f\u001a\u0004\u0018\u00010\u000e2\"\u0010\r\u001a\u001e\b\u0001\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\f\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u000b¢\u0006\u0004\b\u000f\u0010\u0010J\r\u0010\u0011\u001a\u00020\b¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u0013R\u0018\u0010\u0015\u001a\u0004\u0018\u00010\u00148\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R4\u0010\r\u001a \b\u0001\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\f\u0012\u0006\u0012\u0004\u0018\u00010\u0001\u0018\u00010\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\r\u0010\u0017¨\u0006\u0019"}, d2 = {"Lcom/dh/myembyapp/server/SubtitleFontUploadServerManager;", "", "Landroid/content/Context;", "context", "<init>", "(Landroid/content/Context;)V", "Lo32;", "entry", "", "handleUploaded", "(Lo32;)V", "Lkotlin/Function2;", "Lkotlin/coroutines/Continuation;", "onFontUploaded", "", "startServer", "(Lkotlin/jvm/functions/Function2;)Ljava/lang/String;", "stopServer", "()V", "Landroid/content/Context;", "Lcom/dh/myembyapp/server/SubtitleFontUploadServer;", "server", "Lcom/dh/myembyapp/server/SubtitleFontUploadServer;", "Lkotlin/jvm/functions/Function2;", "Companion", "app"}, k = 1, mv = {2, 3, 0}, xi = 48)
 public final class SubtitleFontUploadServerManager {
     private static final int DEFAULT_PORT = 8768;
     private static final int MAX_PORT = 8799;
@@ -34,12 +31,10 @@ public final class SubtitleFontUploadServerManager {
     private final Context context;
     private Function2<? super o32, ? super Continuation<? super Unit>, ? extends Object> onFontUploaded;
     private SubtitleFontUploadServer server;
-    public static final int $stable = 8;
+    
 
     /* JADX INFO: renamed from: com.dh.myembyapp.server.SubtitleFontUploadServerManager$handleUploaded$1, reason: invalid class name */
-    @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {2, 3, 0}, xi = 48)
-    @DebugMetadata(c = "com.dh.myembyapp.server.SubtitleFontUploadServerManager$handleUploaded$1", f = "SubtitleFontUploadServerManager.kt", i = {}, l = {64}, m = "invokeSuspend", n = {}, nl = {"ENVELOPE"}, s = {}, v = 2)
-    public static final class AnonymousClass1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
+            public static final class AnonymousClass1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
         final /* synthetic */ o32 $entry;
         int label;
 
@@ -119,7 +114,7 @@ public final class SubtitleFontUploadServerManager {
                 this.server = null;
                 Log.e(TAG, "Failed to start server on port " + iIntValue, e);
                 String message = e.getMessage();
-                if (message == null || !StringsKt.contains$default(message, (CharSequence) "EADDRINUSE", false, 2, (Object) null)) {
+                if (message == null || !message.contains("EADDRINUSE")) {
                     iOException = e;
                     break;
                 }
@@ -141,8 +136,7 @@ public final class SubtitleFontUploadServerManager {
     }
 
     /* JADX INFO: renamed from: com.dh.myembyapp.server.SubtitleFontUploadServerManager$startServer$1, reason: invalid class name and case insensitive filesystem */
-    @Metadata(k = 3, mv = {2, 3, 0}, xi = 48)
-    public static final /* synthetic */ class C03691 extends FunctionReferenceImpl implements Function1<o32, Unit> {
+        public static final /* synthetic */ class C03691 extends FunctionReferenceImpl implements Function1<o32, Unit> {
         public C03691(Object obj) {
             super(1, obj, SubtitleFontUploadServerManager.class, "handleUploaded", "handleUploaded(Lcom/dh/myembyapp/data/SubtitleFontEntry;)V", 0);
         }
