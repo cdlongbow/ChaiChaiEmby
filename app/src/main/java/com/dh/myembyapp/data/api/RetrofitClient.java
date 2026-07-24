@@ -66,7 +66,7 @@ public final class RetrofitClient {
     private static final Dns socksProxyDns;
     private static boolean trustAllCerts;
     public static final RetrofitClient INSTANCE = new RetrofitClient();
-    private static String baseUrl = "http://127.0.0.1:8096/";
+    private static String baseUrl = "http://192.168.2.100:8096/";
     private static String accessToken = "";
     private static String userId = "";
     private static String deviceId = "";

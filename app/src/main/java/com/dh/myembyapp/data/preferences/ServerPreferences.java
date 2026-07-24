@@ -168,7 +168,7 @@ public final class ServerPreferences {
     }
 
     public final ServerConfig createDefaultServer() {
-        return new ServerConfig(generateServerId(), "我的Emby服务器", "http", "192.168.1.1", 8096, null, "admin", "", null, null, null, 0L, false, false, false, false, false, null, null, null, null, 0L, 4194080, null);
+        return new ServerConfig(generateServerId(), "我的Emby服务器", "http", "192.168.2.100", 8096, null, "emby", "", null, null, null, 0L, false, false, false, false, false, null, null, null, null, 0L, 4194080, null);
     }
 
     public final void deleteServer(String id) {
