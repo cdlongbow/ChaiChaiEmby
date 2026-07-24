@@ -35,6 +35,40 @@ android {
     buildFeatures {
         compose = true
     }
+
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("armeabi-v7a", "arm64-v8a")
+            isUniversalApk = true
+        }
+    }
+
+    sourceSets {
+        matching { it.name == "main" }.configureEach {
+            java.excludes.addAll(listOf(
+                "**/server/BackupRouteConfigServerManager\$fetchServerDomains\$2.java",
+                "**/defpackage/ac1.java",
+                "**/defpackage/ff2.java",
+                "**/defpackage/ie0.java",
+                "**/defpackage/ix.java",
+                "**/defpackage/me0.java",
+                "**/defpackage/mi.java",
+                "**/defpackage/ni.java",
+                "**/defpackage/nx1.java",
+                "**/defpackage/qy0.java",
+                "**/defpackage/se0.java",
+                "**/defpackage/u3.java",
+                "**/defpackage/uc1.java",
+                "**/defpackage/ue.java",
+                "**/defpackage/vh1.java",
+                "**/defpackage/w3.java",
+                "**/defpackage/xa2.java",
+                "**/defpackage/yd0.java"
+            ))
+        }
+    }
 }
 
 dependencies {
