@@ -28,8 +28,67 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Build APKs
+      - name: Build APK from source
         run: ./gradlew assembleDebug
+
+      - name: Download smali/baksmali
+        run: |
+          curl -sL https://github.com/google/smali/releases/download/v2.5.2/smali-2.5.2.jar -o /tmp/smali.jar
+          curl -sL https://github.com/google/smali/releases/download/v2.5.2/baksmali-2.5.2.jar -o /tmp/baksmali.jar
+
+      - name: Patch DEX with OSD overlay
+        run: |
+          BUILT_APK=$(ls app/build/outputs/apk/debug/*.apk | head -1)
+          unzip -o "$BUILT_APK" classes4.dex -d /tmp/apk_work/
+          java -jar /tmp/baksmali.jar d /tmp/apk_work/classes4.dex -o /tmp/smali_patched/
+          cp -r .github/patches/smali/* /tmp/smali_patched/
+          java -jar /tmp/smali.jar a /tmp/smali_patched/ -o /tmp/classes4_patched.dex
+          zip -j "$BUILT_APK" /tmp/classes4_patched.dex
+
+      - name: Replace banner
+        run: |
+          BUILT_APK=$(ls app/build/outputs/apk/debug/*.apk | head -1)
+          BANNER_RES=$(unzip -l "$BUILT_APK" | grep -i "chaichai_b\|kK.png" | awk '{print $4}' | head -1)
+          if [ -n "$BANNER_RES" ]; then
+            cp .github/patches/hemby_banner.png /tmp/hemby_banner.png
+            zip -j "$BUILT_APK" /tmp/hemby_banner.png
+          fi
+
+      - name: Remove payment QR
+        run: |
+          BUILT_APK=$(ls app/build/outputs/apk/debug/*.apk | head -1)
+          PAYMENT_FILE=$(unzip -l "$BUILT_APK" | grep -i "payment_qr\|Er.jpg" | awk '{print $4}' | head -1)
+          if [ -n "$PAYMENT_FILE" ]; then
+            zip -d "$BUILT_APK" "$PAYMENT_FILE"
+          fi
+
+      - name: Resign APK
+        run: |
+          BUILT_APK=$(ls app/build/outputs/apk/debug/*.apk | head -1)
+          UNSIGNED="/tmp/unsigned.apk"
+          SIGNED="/tmp/signed.apk"
+          cp "$BUILT_APK" "$UNSIGNED"
+          KEYSTORE="$ANDROID_HOME/.android/debug.keystore"
+          if [ ! -f "$KEYSTORE" ]; then
+            mkdir -p "$ANDROID_HOME/.android"
+            keytool -genkey -v -keystore "$KEYSTORE" -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=, OU=, O=, L=, S=, C="
+          fi
+          apksigner sign --ks "$KEYSTORE" --ks-key-alias androiddebugkey --ks-pass pass:android --out "$SIGNED" "$UNSIGNED"
+          cp "$SIGNED" "$BUILT_APK"
+
+      - name: Rename APKs
+        run: |
+          for apk in app/build/outputs/apk/debug/*.apk; do
+            base=$(basename "$apk")
+            dir=$(dirname "$apk")
+            if echo "$base" | grep -q "universal"; then
+              mv "$apk" "$dir/hemby-$base"
+            elif echo "$base" | grep -q "arm64-v8a"; then
+              mv "$apk" "$dir/hemby-$base"
+            elif echo "$base" | grep -q "armeabi-v7a"; then
+              mv "$apk" "$dir/hemby-$base"
+            fi
+          done
 
       - name: Determine version
         id: version
@@ -49,10 +108,10 @@ jobs:
             自动构建于 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
             ## APK 说明
-            - **armeabi-v7a** — ARM7 32-bit（Android TV 常用）
+            - **armeabi-v7a** — ARM7 32-bit（Android TV 推荐）
             - **arm64-v8a** — ARM64
             - **universal** — 全架构（体积最大）
           files: |
-            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/debug/hemby-*.apk
           fail_on_unmatched_files: true
           generate_release_notes: false
